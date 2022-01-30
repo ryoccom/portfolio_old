@@ -1,0 +1,80 @@
+@use "../config/config"as config;
+@use "../mixin/mixin"as mixin;
+
+
+
+
+.mainarea{
+    width: 100%;
+    height: 100vh;
+    border: solid 50px #FFF;
+    position: relative;
+   
+    .container{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        &:before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px 50px/50px 10px;
+            border: solid 5px #333;
+            left: 50%;
+            top: 50%;
+            transform:translate(-50%,-50%)
+        } 
+    }
+
+    &__title{
+        margin-right: 5%;
+        h1{
+            border-top: solid 5px #333;
+            border-bottom: solid 5px #333;
+            padding: 30px 0;
+            width: 400px;
+            position: relative;
+        }
+        &__text{
+            padding: 40px 0  80px;
+            p{
+                font-size: 2.3rem;
+                font-weight: 500;
+                line-height: 2.2;
+            }
+        }
+    }
+    .thinking{
+        position: absolute;
+        bottom: 5%;
+        left: 0;
+        z-index:-1;
+        animation: think 16s infinite linear;
+        white-space: nowrap;
+        p{
+            font-weight: 700;
+            font-size: 200px;
+            color: #eee;
+            line-height: 1;
+            display: inline-block;
+            margin-left: 100px;
+        }
+    }
+    
+   
+    
+}
+
+@keyframes think {
+    0% {
+    transform: translateX(50px);
+    }
+  
+    100% {
+    transform: translateX(-100%);
+    }
+  }

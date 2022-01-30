@@ -1,0 +1,16 @@
+@use "../config/config" as config;
+
+//wrappersize
+@mixin wrappersize(){
+  margin: 0 auto;
+  max-width: config.$sizel;
+}
+
+
+//mediaquery
+// @mixin mq($breakpoint: sm) {
+//     @media #{map-get($breakpoints, $breakpoint)} {
+//       @content;
+//     }
+// }
+

@@ -56,5 +56,9 @@ module.exports = {
             filename: 'css/[name]'
         }),
     ],
-    target: ["web", "es5"]
+    target: ["web", "es5"],
+    watch: true,
+    watchOptions: {
+        poll: true
+    }
 };

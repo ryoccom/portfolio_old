@@ -1,0 +1,38 @@
+
+@use "../config/config" as config;
+//base css sets
+
+html {
+  font-size: 62.5%;
+}
+body {
+    color: config.$textcolor; 
+    font-size: 1.6em;
+    line-height: 1.9;
+    font-family: 'Noto Sans JP', sans-serif;
+    letter-spacing: 0;
+    position: relative;
+}
+
+
+a {
+    outline: none; 
+    text-decoration: none;
+    transition: .2s;
+    &:hover {
+        text-decoration: none;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+// button{
+//     border: none;
+   
+//     transition: .2s;
+//     &:focus{
+//         outline: none;
+//     }
+// }
+
