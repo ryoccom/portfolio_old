@@ -2,7 +2,9 @@
 @use "../mixin/mixin"as mixin;
 
 
-
+.wrapper{
+    overflow: hidden;
+}
 
 .mainarea{
     width: 100%;
@@ -52,8 +54,7 @@
         position: absolute;
         bottom: 5%;
         left: 0;
-        z-index:-1;
-        animation: think 16s infinite linear;
+        z-index:-1; 
         white-space: nowrap;
         p{
             font-weight: 700;
@@ -61,20 +62,37 @@
             color: #eee;
             line-height: 1;
             display: inline-block;
-            margin-left: 100px;
+            padding-right: 100px;
+            &:first-child{
+                animation: think01 16s infinite linear;
+            }
+            &:last-child{
+                animation: think01 16s infinite linear;
+            }
         }
+
     }
     
    
     
 }
 
-@keyframes think {
+@keyframes think01 {
     0% {
-    transform: translateX(50px);
+    transform: translateX(0);
     }
   
     100% {
     transform: translateX(-100%);
+    }
+  }
+
+  @keyframes think02 {
+    0% {
+    transform: translateX(0);
+    }
+  
+    100% {
+    transform: translateX(-200%);
     }
   }

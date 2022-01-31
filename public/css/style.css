@@ -641,6 +641,7 @@ body {
   font-family: "Noto Sans JP", sans-serif;
   letter-spacing: 0;
   position: relative;
+  cursor: none;
 }
 
 a {
@@ -656,6 +657,63 @@ a:focus {
   outline: none;
 }
 
+.cursor {
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.cursor {
+  width: 8px;
+  height: 8px;
+  background-color: #000;
+  z-index: 1000;
+}
+.cursor::before, .cursor::after {
+  content: "";
+  position: absolute;
+  border: solid 2px #000;
+  border-radius: 50%;
+}
+.cursor:before {
+  width: 14px;
+  height: 14px;
+  left: -3px;
+  top: -3px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+}
+.cursor:after {
+  width: 20px;
+  height: 20px;
+  left: -6px;
+  top: -6px;
+  -webkit-animation: flash 1s linear infinite;
+          animation: flash 1s linear infinite;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+
+@-webkit-keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  50%, 100% {
+    opacity: 1;
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  50%, 100% {
+    opacity: 1;
+  }
+}
 .loading {
   width: 100%;
   height: 100vh;
@@ -672,6 +730,10 @@ a:focus {
 }
 .loading__mask img {
   width: 600px;
+}
+
+.wrapper {
+  overflow: hidden;
 }
 
 .mainarea {
@@ -729,8 +791,6 @@ a:focus {
   bottom: 5%;
   left: 0;
   z-index: -1;
-  -webkit-animation: think 16s infinite linear;
-          animation: think 16s infinite linear;
   white-space: nowrap;
 }
 .mainarea .thinking p {
@@ -739,13 +799,21 @@ a:focus {
   color: #eee;
   line-height: 1;
   display: inline-block;
-  margin-left: 100px;
+  padding-right: 100px;
+}
+.mainarea .thinking p:first-child {
+  -webkit-animation: think01 16s infinite linear;
+          animation: think01 16s infinite linear;
+}
+.mainarea .thinking p:last-child {
+  -webkit-animation: think01 16s infinite linear;
+          animation: think01 16s infinite linear;
 }
 
-@-webkit-keyframes think {
+@-webkit-keyframes think01 {
   0% {
-    -webkit-transform: translateX(50px);
-            transform: translateX(50px);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   100% {
     -webkit-transform: translateX(-100%);
@@ -753,13 +821,33 @@ a:focus {
   }
 }
 
-@keyframes think {
+@keyframes think01 {
   0% {
-    -webkit-transform: translateX(50px);
-            transform: translateX(50px);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   100% {
     -webkit-transform: translateX(-100%);
             transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes think02 {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%);
+  }
+}
+@keyframes think02 {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%);
   }
 }
