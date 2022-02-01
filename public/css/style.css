@@ -657,6 +657,24 @@ a:focus {
   outline: none;
 }
 
+.loading {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+}
+.loading__mask img {
+  width: 600px;
+}
+
 .cursor {
   border-radius: 50%;
   position: absolute;
@@ -714,24 +732,216 @@ a:focus {
     opacity: 1;
   }
 }
-.loading {
+.menu {
+  position: absolute;
   width: 100%;
   height: 100vh;
+  z-index: 1;
+}
+.menu__list {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+}
+.menu__list:before, .menu__list:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 33.3333333333%;
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+.menu__list:before {
+  top: 0;
+}
+.menu__list:after {
+  bottom: 0;
+}
+.menu__list__wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.menu__list__wrap:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 33.3333333333%;
+  background: rgba(0, 0, 0, 0.8);
+  top: 33.3%;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+.menu__toggle {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  top: 3%;
+  right: 1.5%;
+  border-radius: 50%;
+  background: #ddd;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+  cursor: pointer;
+  z-index: 2000;
+  overflow: hidden;
 }
-.loading__mask img {
-  width: 600px;
+.menu__toggle:hover {
+  background: #f4f433;
+}
+.menu__toggle:hover .menu__toggle__btn button:before {
+  -webkit-animation: lines 0.15s linear forwards;
+          animation: lines 0.15s linear forwards;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+.menu__toggle:hover .menu__toggle__btn:before, .menu__toggle:hover .menu__toggle__btn:after {
+  -webkit-animation: lines 0.2s linear forwards;
+          animation: lines 0.2s linear forwards;
+}
+.menu__toggle:hover .menu__toggle__btn:after {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.menu__toggle__btn {
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+.menu__toggle__btn button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+.menu__toggle__btn button:before {
+  content: "";
+  height: 3px;
+  background: #333;
+  width: 30px;
+  line-height: 0;
+  padding: 0;
+  position: absolute;
+  top: 16px;
+  right: 0;
+}
+.menu__toggle__btn:before, .menu__toggle__btn:after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  background: #333;
+  right: 0;
+}
+.menu__toggle__btn:before {
+  top: 10px;
+  width: 20px;
+}
+.menu__toggle__btn:after {
+  bottom: 10px;
+  width: 40px;
 }
 
+.js-open .menu__list:before, .js-open .menu__list:after {
+  -webkit-animation: bgblack 0.3s linear forwards;
+          animation: bgblack 0.3s linear forwards;
+}
+.js-open .menu__list:before {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+.js-open .menu__list::after {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.js-open .menu__list__wrap:before {
+  -webkit-animation: bgblack 0.3s linear forwards;
+          animation: bgblack 0.3s linear forwards;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.js-open .menu__toggle__btn:before, .js-open .menu__toggle__btn:after {
+  -webkit-animation: lineClick 0.3s linear forwards;
+          animation: lineClick 0.3s linear forwards;
+}
+.js-open .menu__toggle__btn button:before {
+  -webkit-animation: lineClick 0.3s linear forwards;
+          animation: lineClick 0.3s linear forwards;
+}
+
+@-webkit-keyframes lines {
+  0% {
+    width: 0;
+  }
+}
+
+@keyframes lines {
+  0% {
+    width: 0;
+  }
+}
+@-webkit-keyframes bgblack {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes bgblack {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@-webkit-keyframes lineClick {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(-350%);
+            transform: translateX(-350%);
+  }
+  100% {
+    -webkit-transform: translateX(-350%);
+            transform: translateX(-350%);
+    display: none;
+  }
+}
+@keyframes lineClick {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(-350%);
+            transform: translateX(-350%);
+  }
+  100% {
+    -webkit-transform: translateX(-350%);
+            transform: translateX(-350%);
+    display: none;
+  }
+}
 .wrapper {
   overflow: hidden;
 }
