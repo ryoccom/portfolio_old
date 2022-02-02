@@ -1,8 +1,7 @@
 //colorset
-$textcolor: #000;
-$bgcolor: #dcdcdc;
-$maincolor: #1432e6;
-$subcolor: #00142d;
+$textcolor: #000000;
+$activecolor: #f4f433;
+$subcolor: #eeeeee;
 
 //wrappersize
 $sizel:1280px;
@@ -15,6 +14,5 @@ $breakpoints: (
   'md': 'screen and (max-width: 1023px)'
 );
 
-//拡大率 1000px から　1280px
-$expand:1.28;
+
 

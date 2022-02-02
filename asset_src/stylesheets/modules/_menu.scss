@@ -6,10 +6,61 @@
     height: 100vh;
     z-index: 1;
 
+
     &__list {
         position: fixed;
         width: 100%;
         height: 100vh;
+        pointer-events: none;
+
+        &__wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            ul {
+                position: relative;
+                z-index: 1;
+                opacity: 0;
+
+                li {
+                    text-align: center;
+
+                    a {
+                        color: #FFF;
+                        font-size: 2.5rem;
+                        padding: 20px;
+                        display: inline-block;
+                        font-weight: 700;
+                        transition: .2s;
+                        position: relative;
+
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            width: 0;
+                            height: 2px;
+                            background: #FFF;
+                            bottom: 15px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            transition: .2s;
+                        }
+
+                        &:hover {
+                            letter-spacing: 6px;
+
+                            &:after {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+
 
         &:before,
         &:after {
@@ -17,16 +68,19 @@
             position: absolute;
             width: 100%;
             height: calc(100% / 3);
-            background: rgba(0, 0, 0, .8);
+            background: rgba(0, 0, 0, .9);
             transform: translateX(100%);
+            transition: .2s;
         }
 
         &:before {
             top: 0;
+            transition-delay: .4s;
         }
 
         &:after {
             bottom: 0;
+            transition-delay: .2s;
         }
 
         &__wrap {
@@ -39,9 +93,11 @@
                 position: absolute;
                 width: 100%;
                 height: calc(100% / 3);
-                background: rgba(0, 0, 0, .8);
+                background: rgba(0, 0, 0, .9);
                 top: 33.3%;
                 transform: translateX(100%);
+                transition: .2s;
+                transition-delay: .3s;
             }
         }
     }
@@ -58,15 +114,17 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: .2s linear;
+
         cursor: pointer;
         z-index: 2000;
         overflow: hidden;
+        transition: .2s;
+
 
         &:hover {
-            background: #f4f433;
+            background: config.$activecolor;
 
-            .menu__toggle__btn {
+            .js-close {
                 button {
 
                     &:before {
@@ -84,6 +142,7 @@
                     animation-delay: .2s;
                 }
             }
+
         }
 
         &__btn {
@@ -97,11 +156,14 @@
                 width: 40px;
                 height: 40px;
                 position: relative;
+                border: none;
+                outline: none;
+
 
                 &:before {
                     content: "";
                     height: 3px;
-                    background: #333;
+                    background: config.$textcolor;
                     width: 30px;
                     line-height: 0;
                     padding: 0;
@@ -117,51 +179,50 @@
                 content: "";
                 position: absolute;
                 height: 3px;
-                background: #333;
+                background: config.$textcolor;
                 right: 0;
             }
 
             &:before {
                 top: 10px;
                 width: 20px;
-
             }
 
             &:after {
                 bottom: 10px;
                 width: 40px;
-
             }
         }
     }
 }
 
-.js-open {
+.js-active {
     .menu__list {
+        pointer-events: initial;
 
         &:before,
         &:after {
-            animation: bgblack .3s linear forwards;
+            transform: translateX(0);
         }
 
-        &:before {
-            animation-delay: .4s;
-        }
-
-        &::after {
-            animation-delay: .2s;
-        }
 
         &__wrap {
+            ul {
+                animation: fadeIn .3s linear forwards;
+                animation-delay: .8s;
+
+            }
+
             &:before {
-                animation: bgblack .3s linear forwards;
-                animation-delay: .3s;
+                transform: translateX(0);
             }
         }
     }
 
     .menu__toggle {
-        
+        &:hover {
+            background: config.$subcolor;
+        }
 
         &__btn {
 
@@ -174,13 +235,34 @@
                 &:before {
                     animation: lineClick .3s linear forwards;
                 }
+
+                &:after {
+                    content: "閉";
+                    font-size: 3rem;
+                    font-weight: 700;
+                    line-height: 1;
+                    transform: translateY(-100px);
+                    animation: close .05s linear forwards;
+                    animation-delay: .05s;
+                    display: block;
+
+                }
             }
         }
-        //js-open とjs-closeでつけたら？
+
+        &:hover {
+            .menu__toggle__btn {
+                button {
+                    opacity: .5;
+                }
+            }
+        }
 
     }
-
 }
+
+
+
 
 @keyframes lines {
     0% {
@@ -190,13 +272,13 @@
     100% {}
 }
 
-@keyframes bgblack {
+@keyframes fadeIn {
     0% {
-        transform: translateX(100%);
+        opacity: 0;
     }
 
     100% {
-        transform: translateX(0);
+        opacity: 1;
     }
 }
 
@@ -209,8 +291,20 @@
         transform: translateX(-350%);
     }
 
-    100%{
+    100% {
         transform: translateX(-350%);
         display: none;
+    }
+}
+
+@keyframes close {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
     }
 }

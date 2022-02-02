@@ -12,13 +12,13 @@
 .cursor {
     width: 8px;
     height: 8px;
-    background-color: #000;
+    background-color: config.$textcolor; 
     z-index: 1000;
     &::before,
     &::after{
         content: "";
         position: absolute;
-        border:solid 2px #000;
+        border:solid 2px config.$textcolor; 
         border-radius: 50%;
     }
     &:before{
@@ -35,6 +35,13 @@
         top: -6px; 
         animation: flash 1s linear infinite;
         animation-delay: 2.5s;
+    }
+    &.js-menu{
+        background-color: config.$activecolor;
+        &:before,
+        &:after{
+            border-color: config.$activecolor;
+        }
     }
 }
 

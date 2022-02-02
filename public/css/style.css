@@ -1,6 +1,7 @@
 /*!*****************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[0].use[3]!./asset_src/stylesheets/style.scss ***!
   \*****************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -635,7 +636,7 @@ html {
 }
 
 body {
-  color: #000;
+  color: #000000;
   font-size: 1.6em;
   line-height: 1.9;
   font-family: "Noto Sans JP", sans-serif;
@@ -687,13 +688,13 @@ a:focus {
 .cursor {
   width: 8px;
   height: 8px;
-  background-color: #000;
+  background-color: #000000;
   z-index: 1000;
 }
 .cursor::before, .cursor::after {
   content: "";
   position: absolute;
-  border: solid 2px #000;
+  border: solid 2px #000000;
   border-radius: 50%;
 }
 .cursor:before {
@@ -713,6 +714,12 @@ a:focus {
           animation: flash 1s linear infinite;
   -webkit-animation-delay: 2.5s;
           animation-delay: 2.5s;
+}
+.cursor.js-menu {
+  background-color: #f4f433;
+}
+.cursor.js-menu:before, .cursor.js-menu:after {
+  border-color: #f4f433;
 }
 
 @-webkit-keyframes flash {
@@ -742,21 +749,76 @@ a:focus {
   position: fixed;
   width: 100%;
   height: 100vh;
+  pointer-events: none;
+}
+.menu__list__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.menu__list__wrap ul {
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+}
+.menu__list__wrap ul li {
+  text-align: center;
+}
+.menu__list__wrap ul li a {
+  color: #FFF;
+  font-size: 2.5rem;
+  padding: 20px;
+  display: inline-block;
+  font-weight: 700;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  position: relative;
+}
+.menu__list__wrap ul li a:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #FFF;
+  bottom: 15px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.menu__list__wrap ul li a:hover {
+  letter-spacing: 6px;
+}
+.menu__list__wrap ul li a:hover:after {
+  width: 100%;
 }
 .menu__list:before, .menu__list:after {
   content: "";
   position: absolute;
   width: 100%;
   height: 33.3333333333%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.9);
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 .menu__list:before {
   top: 0;
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
 }
 .menu__list:after {
   bottom: 0;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
 }
 .menu__list__wrap {
   position: relative;
@@ -768,10 +830,14 @@ a:focus {
   position: absolute;
   width: 100%;
   height: 33.3333333333%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.9);
   top: 33.3%;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
 }
 .menu__toggle {
   width: 100px;
@@ -790,26 +856,26 @@ a:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transition: 0.2s linear;
-  transition: 0.2s linear;
   cursor: pointer;
   z-index: 2000;
   overflow: hidden;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 .menu__toggle:hover {
   background: #f4f433;
 }
-.menu__toggle:hover .menu__toggle__btn button:before {
+.menu__toggle:hover .js-close button:before {
   -webkit-animation: lines 0.15s linear forwards;
           animation: lines 0.15s linear forwards;
   -webkit-animation-delay: 0.1s;
           animation-delay: 0.1s;
 }
-.menu__toggle:hover .menu__toggle__btn:before, .menu__toggle:hover .menu__toggle__btn:after {
+.menu__toggle:hover .js-close:before, .menu__toggle:hover .js-close:after {
   -webkit-animation: lines 0.2s linear forwards;
           animation: lines 0.2s linear forwards;
 }
-.menu__toggle:hover .menu__toggle__btn:after {
+.menu__toggle:hover .js-close:after {
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
 }
@@ -826,11 +892,13 @@ a:focus {
   width: 40px;
   height: 40px;
   position: relative;
+  border: none;
+  outline: none;
 }
 .menu__toggle__btn button:before {
   content: "";
   height: 3px;
-  background: #333;
+  background: #000000;
   width: 30px;
   line-height: 0;
   padding: 0;
@@ -842,7 +910,7 @@ a:focus {
   content: "";
   position: absolute;
   height: 3px;
-  background: #333;
+  background: #000000;
   right: 0;
 }
 .menu__toggle__btn:before {
@@ -854,31 +922,49 @@ a:focus {
   width: 40px;
 }
 
-.js-open .menu__list:before, .js-open .menu__list:after {
-  -webkit-animation: bgblack 0.3s linear forwards;
-          animation: bgblack 0.3s linear forwards;
+.js-active .menu__list {
+  pointer-events: initial;
 }
-.js-open .menu__list:before {
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
+.js-active .menu__list:before, .js-active .menu__list:after {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
-.js-open .menu__list::after {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+.js-active .menu__list__wrap ul {
+  -webkit-animation: fadeIn 0.3s linear forwards;
+          animation: fadeIn 0.3s linear forwards;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
 }
-.js-open .menu__list__wrap:before {
-  -webkit-animation: bgblack 0.3s linear forwards;
-          animation: bgblack 0.3s linear forwards;
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
+.js-active .menu__list__wrap:before {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
-.js-open .menu__toggle__btn:before, .js-open .menu__toggle__btn:after {
+.js-active .menu__toggle:hover {
+  background: #eeeeee;
+}
+.js-active .menu__toggle__btn:before, .js-active .menu__toggle__btn:after {
   -webkit-animation: lineClick 0.3s linear forwards;
           animation: lineClick 0.3s linear forwards;
 }
-.js-open .menu__toggle__btn button:before {
+.js-active .menu__toggle__btn button:before {
   -webkit-animation: lineClick 0.3s linear forwards;
           animation: lineClick 0.3s linear forwards;
+}
+.js-active .menu__toggle__btn button:after {
+  content: "閉";
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
+  -webkit-animation: close 0.05s linear forwards;
+          animation: close 0.05s linear forwards;
+  -webkit-animation-delay: 0.05s;
+          animation-delay: 0.05s;
+  display: block;
+}
+.js-active .menu__toggle:hover .menu__toggle__btn button {
+  opacity: 0.5;
 }
 
 @-webkit-keyframes lines {
@@ -892,24 +978,20 @@ a:focus {
     width: 0;
   }
 }
-@-webkit-keyframes bgblack {
+@-webkit-keyframes fadeIn {
   0% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    opacity: 1;
   }
 }
-@keyframes bgblack {
+@keyframes fadeIn {
   0% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    opacity: 1;
   }
 }
 @-webkit-keyframes lineClick {
@@ -940,6 +1022,30 @@ a:focus {
     -webkit-transform: translateX(-350%);
             transform: translateX(-350%);
     display: none;
+  }
+}
+@-webkit-keyframes close {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes close {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
   }
 }
 .wrapper {

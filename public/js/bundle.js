@@ -26,7 +26,7 @@ eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**\n * vi
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_loading__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/loading */ \"./asset_src/js/modules/loading.js\");\n/* harmony import */ var _modules_cursor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/cursor */ \"./asset_src/js/modules/cursor.js\");\n/* harmony import */ var _modules_cursor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_cursor__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\n//# sourceURL=webpack://portfolio/./asset_src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_loading__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/loading */ \"./asset_src/js/modules/loading.js\");\n/* harmony import */ var _modules_cursor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/cursor */ \"./asset_src/js/modules/cursor.js\");\n/* harmony import */ var _modules_cursor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_cursor__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _modules_menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/menu */ \"./asset_src/js/modules/menu.js\");\n/* harmony import */ var _modules_menu__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_menu__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\n\n//# sourceURL=webpack://portfolio/./asset_src/js/index.js?");
 
 /***/ }),
 
@@ -48,6 +48,16 @@ eval("var cursor = document.querySelector('.cursor');\ncursorWidth = 20;\ndocume
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var Vivus__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! Vivus */ \"./node_modules/Vivus/dist/vivus.js\");\n/* harmony import */ var Vivus__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(Vivus__WEBPACK_IMPORTED_MODULE_0__);\n\n\n//# sourceURL=webpack://portfolio/./asset_src/js/modules/loading.js?");
+
+/***/ }),
+
+/***/ "./asset_src/js/modules/menu.js":
+/*!**************************************!*\
+  !*** ./asset_src/js/modules/menu.js ***!
+  \**************************************/
+/***/ (function() {
+
+eval("var menuTrigger = document.querySelector('.menu__toggle');\nvar menu = document.querySelector('.menu');\nvar menuBtn = document.querySelector('.menu__toggle__btn');\nvar cursor = document.querySelector('.cursor');\n\nfunction btnClick() {\n  menu.classList.toggle('js-active');\n  menuBtn.classList.toggle('js-close');\n  cursor.classList.toggle('js-menu');\n}\n\nmenuTrigger.addEventListener('click', btnClick);\n\n//# sourceURL=webpack://portfolio/./asset_src/js/modules/menu.js?");
 
 /***/ })
 
