@@ -1,0 +1,44 @@
+<svg id="face.svg" xmlns="http://www.w3.org/2000/svg" width="536.37" height="683.156" viewBox="0 0 536.37 683.156">
+  <defs>
+    <style>
+      .cls-1, .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke: #000;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 10px;
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #2d1d0c;
+      }
+
+      .cls-3 {
+        fill: none;
+      }
+
+      .cls-4 {
+        stroke: #333;
+      }
+    </style>
+  </defs>
+  <path id="face" class="cls-1" d="M2326.95,262.509s-110.19,171.735,5.87,251.314,240.9,51.058,280.07-48.512c0,0,60.54,42.342,74.51,3.887s-0.92-96.968-50.5-62.3L2659.02,322s9.4-148.078-79.51-177.06C2447.43,101.89,2383.25,137.506,2326.95,262.509Z" transform="translate(-2274.66 -48)"/>
+  <path id="hair" class="cls-2" d="M2339.38,184.844l280.89,94.1,40.56-44.561s-49.21,394.6-191.88,467.874c0,0,221.79,82.464,273.02-58.942s144.91-500.872-76.69-577.248C2665.28,66.066,2415.18-5.152,2339.38,184.844Z" transform="translate(-2274.66 -48)"/>
+  <path id="nose" class="cls-1" d="M2385.46,345.466s20.11-40.974,40.7,10.427" transform="translate(-2274.66 -48)"/>
+  <path id="mouth" class="cls-3" d="M2336.6,382.952l4.5,16.681s29.45-27.7,73.46-4.394,35.34,39.835,35.34,39.835l23.09-12.552" transform="translate(-2274.66 -48)"/>
+  <g id="shiwa">
+    <path id="シェイプ_26" data-name="シェイプ 26" class="cls-1" d="M2436.13,244.278s3.96,26.841-5.93,27.532" transform="translate(-2274.66 -48)"/>
+    <path id="シェイプ_26_のコピー" data-name="シェイプ 26 のコピー" class="cls-1" d="M2458.98,248.211s3.95,26.841-5.93,27.532" transform="translate(-2274.66 -48)"/>
+  </g>
+  <g id="eyeblow">
+    <path id="eyeblow-2" data-name="eyeblow" class="cls-4" d="M2352.34,230l57.63-22" transform="translate(-2274.66 -48)"/>
+    <path id="eyeblow02" class="cls-4" d="M2555.65,306L2532.19,252" transform="translate(-2274.66 -48)"/>
+  </g>
+</svg>

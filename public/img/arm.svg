@@ -1,0 +1,19 @@
+<svg id="arm.svg" xmlns="http://www.w3.org/2000/svg" width="260.34" height="430.6" viewBox="0 0 260.34 430.6">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+        stroke: #000;
+        stroke-width: 10px;
+        fill-rule: evenodd;
+      }
+
+      .cls-1 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    </style>
+  </defs>
+  <path id="シェイプ_6" data-name="シェイプ 6" class="cls-1" d="M2248.06,1197.57s-32.26-46.64-5.38-73.28,37.68-43.47,53.88-31.68,42.76,7.06,55.55,28.42,36.26,20.49,30.49,52.65-35.75,68.9-75.32,59.48S2248.06,1197.57,2248.06,1197.57Z" transform="translate(-2128.16 -1083.78)"/>
+  <path id="シェイプ_7" data-name="シェイプ 7" class="cls-2" d="M2133.15,1422.97s86.86-246.82,138.79-248.43,58.17,23.85,58.02,35.57-40.57,228.48-48.69,233.31S2139.38,1601.88,2133.15,1422.97Z" transform="translate(-2128.16 -1083.78)"/>
+</svg>

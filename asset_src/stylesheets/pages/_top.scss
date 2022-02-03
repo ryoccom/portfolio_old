@@ -33,7 +33,8 @@
     }
 
     &__title{
-        margin-right: 5%;
+       
+        margin-bottom: 1%;
         h1{
             border-top: solid 5px #333;
             border-bottom: solid 5px #333;
@@ -50,6 +51,11 @@
             }
         }
     }
+    &__images{
+        position: relative;
+        width: 40%;
+    }
+
     .thinking{
         position: absolute;
         bottom: 5%;
