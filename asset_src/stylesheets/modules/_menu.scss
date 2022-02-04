@@ -1,18 +1,17 @@
 @use "../config/config"as config;
 
 .menu {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    z-index: 10000;
 
-
+   
+     
 
     &__list {
         position: fixed;
         width: 100%;
         height: 100vh;
+        z-index: 1000;
         pointer-events: none;
+       
 
         &__wrap {
             display: flex;

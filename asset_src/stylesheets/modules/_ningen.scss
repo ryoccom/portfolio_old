@@ -1,5 +1,5 @@
 @use "../config/config"as config;
-//大枠以外全部％にしようぜ
+
 
 .ningen {
     position: relative;
@@ -11,85 +11,177 @@
     }
 
     &__body {
-        width: 350px;
-        margin-bottom: -300px;
+        max-width: 350px;
+        margin-bottom: -280px;
+        width: 82%;
+        position: relative;
+
+        &__arm {
+            position: absolute;
+            width: 32%;
+            right: 49%;
+            top: 11%;
+            z-index: 3;
+            max-width: 111px;
+        }
+
+        &__fukidashi {
+            position: absolute;
+            top: -63%;
+            left: -56%;
+            max-width: 350px;
+            width: 93%;
+            display: flex;
+            justify-content: center;
+            z-index: 5;
+            animation: fuwafuwa 3s infinite ease-in-out;
+            animation-delay: 3s;
+
+            img {
+                animation: fukidashi 1s ease-out forwards;
+                animation-delay: 4s;
+                opacity: 0;
+            }
+
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                border-radius: 50%;
+                background: #ddd;
+                opacity: 0;
+                animation: fadeIn .2s cubic-bezier(.17, .67, .83, .67) forwards;
+                
+            }
+
+            &:before {
+                left: 83%;
+                top: 88%;
+                width: 9%;
+                height: 12%;
+                animation-delay: 3.5s;
+            }
+
+            &:after {
+                left: 94%;
+                top: 100%;
+                width: 6%;
+                height: 8%;
+                animation-delay: 3s;
+            }
+
+            &__comment {
+                position: absolute;
+                top: 0;
+                left: 0%;
+                width: 100%;
+                height: 100%;
+
+                ul {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+
+                    li {
+                        font-size: 4rem;
+                        width: 0;
+                        overflow: hidden;
+                        display: inline-block;
+                        animation: dots 8s cubic-bezier(.17, .67, .83, .67) infinite;
+                        animation-delay: 5s;
+                        text-align: center;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
     }
 
     &__face {
         position: absolute;
         z-index: 1;
-        width: 216px;
-        height: 275px;
-        top: -108px;
-        right: 20px;
+        width: 47%;
+        top: -36%;
+        max-width: 218px;
+        right: 5%;
         animation: face 3s cubic-bezier(.17, .67, .83, .67) infinite;
+
+        &__eye {
+
+            &__open {
+                position: absolute;
+                max-width: 80px;
+                width: 38%;
+                top: 31%;
+                right: 53%;
+                z-index: 2;
+                animation: eyeOpen 4s cubic-bezier(.17, .67, .83, .67) 4s infinite;
+
+                img {
+                    transform-origin: right bottom;
+                    animation: face 3s cubic-bezier(.17, .67, .83, .67) infinite;
+                }
+
+            }
+
+            &__close {
+                position: absolute;
+                max-width: 80px;
+                width: 39%;
+                top: 35%;
+                right: 54%;
+                z-index: 2;
+                opacity: 0;
+                animation: eyeClose 4s cubic-bezier(.17, .67, .83, .67) 4s infinite;
+                animation-delay: 4s;
+
+                img {
+                    transform-origin: right bottom;
+                    animation: face 3s cubic-bezier(.17, .67, .83, .67) infinite;
+                }
+
+            }
+        }
     }
 
-    &__eye {
-        &__open{
-            position: absolute;
-            width: 80px;
-            top: -22px;
-            right: 131px;
-            z-index: 2;
-            animation: eyeOpen 4s cubic-bezier(.17, .67, .83, .67) 4s infinite;
-            img{
-                transform-origin: right bottom;
-                animation: face 3s cubic-bezier(.17, .67, .83, .67) infinite;
-            }
-           
-        }
-        &__close{
-            position: absolute;
-            width: 80px;
-            top: -12px;
-            right: 136px;
-            z-index: 2;
-            opacity: 0;
-            animation: eyeClose 4s cubic-bezier(.17, .67, .83, .67) 4s infinite;
-            animation-delay: 4s;
-            img{
-                transform-origin: right bottom;
-                animation: face 3s cubic-bezier(.17, .67, .83, .67) infinite;
-            }
-            
-        }
-    }
-    &__arm{
+    &__comment {
         position: absolute;
-        width: 110px;
-        right: 180px; 
-        top: 65px;
-        z-index: 3;
-    }
-    &__fukidashi{
-        position: absolute;
-        bottom: 350px;
-        left: 5%;
-        width: 350px;
-        display: flex;
-        justify-content: center;
-        &:before,
-        &:after{
-            content: "";
-            position: absolute;
-            border-radius: 50%;
-            background: #ddd;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+
+        ul {
+            li {
+                position: absolute;
+                font-size: 2rem;
+                opacity: 0;
+                
+                
+            }
         }
-        &:before{
-            left: 85%;
-            top: 88%;
-            width: 40px;
-            height: 40px;
+
+        &__no1 {
+            top: -60%;
+            right: -2%;
+            animation: fadeIn .5s cubic-bezier(.17, .67, .83, .67) forwards;
+            animation-delay: 9s;
         }
-        &__comment{
-           ul{
-               li{
-                   display: none;
-               }
-           }
+
+        &__no2 {
+            top: 10%;
+            right: 45%;
+            animation: fadeIn .5s cubic-bezier(.17, .67, .83, .67) forwards;
+            animation-delay: 10s;
         }
     }
+
+
+
+
+
+
 }
 
 
@@ -99,7 +191,7 @@
     }
 
     50% {
-        transform: rotate(-10deg);
+        transform: rotate(-8deg);
     }
 
     100% {
@@ -109,12 +201,14 @@
 }
 
 @keyframes eyeOpen {
-    0%{
+    0% {
         opacity: 1;
     }
-    49%{
+
+    49% {
         opacity: 1;
     }
+
     50% {
         opacity: 0;
     }
@@ -126,12 +220,14 @@
 }
 
 @keyframes eyeClose {
-    0%{
+    0% {
         opacity: 0;
     }
-    49%{
+
+    49% {
         opacity: 0;
     }
+
     50% {
         opacity: 1;
     }
@@ -142,5 +238,64 @@
 
 }
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fukidashi {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+        transform: scale(0.7);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+
+    60% {
+        transform: scale(0.7);
+    }
+
+    80% {
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 
 
+@keyframes fuwafuwa {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(0, -10px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes dots {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
