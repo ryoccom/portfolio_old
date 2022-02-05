@@ -2,19 +2,19 @@
 
 
 .ningen {
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
+    position: absolute;
+    bottom: -30%;
+    right: 0;
 
     img {
         width: 100%;
     }
 
     &__body {
-        max-width: 350px;
-        margin-bottom: -280px;
-        width: 82%;
+       
+        width: 57%;
         position: relative;
+       margin-left:40%;
 
         &__arm {
             position: absolute;
@@ -22,14 +22,12 @@
             right: 49%;
             top: 11%;
             z-index: 3;
-            max-width: 111px;
         }
 
         &__fukidashi {
             position: absolute;
-            top: -63%;
-            left: -56%;
-            max-width: 350px;
+            top: -45%;
+            left: -70%;
             width: 93%;
             display: flex;
             justify-content: center;
@@ -84,7 +82,7 @@
                     height: 100%;
 
                     li {
-                        font-size: 4rem;
+                        font-size: 2.8vw;
                         width: 0;
                         overflow: hidden;
                         display: inline-block;
@@ -101,9 +99,8 @@
     &__face {
         position: absolute;
         z-index: 1;
-        width: 47%;
-        top: -36%;
-        max-width: 218px;
+        width: 34%;
+        top: -17%;
         right: 5%;
         animation: face 3s cubic-bezier(.17, .67, .83, .67) infinite;
 
@@ -111,7 +108,7 @@
 
             &__open {
                 position: absolute;
-                max-width: 80px;
+                
                 width: 38%;
                 top: 31%;
                 right: 53%;
@@ -127,7 +124,6 @@
 
             &__close {
                 position: absolute;
-                max-width: 80px;
                 width: 39%;
                 top: 35%;
                 right: 54%;
@@ -155,7 +151,7 @@
         ul {
             li {
                 position: absolute;
-                font-size: 2rem;
+                font-size: 1.3vw;
                 opacity: 0;
                 
                 
@@ -163,15 +159,15 @@
         }
 
         &__no1 {
-            top: -60%;
-            right: -2%;
+            top: -30%;
+            right: -3%;
             animation: fadeIn .5s cubic-bezier(.17, .67, .83, .67) forwards;
             animation-delay: 9s;
         }
 
         &__no2 {
             top: 10%;
-            right: 45%;
+            right: 50%;
             animation: fadeIn .5s cubic-bezier(.17, .67, .83, .67) forwards;
             animation-delay: 10s;
         }

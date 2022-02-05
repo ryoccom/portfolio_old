@@ -94,7 +94,7 @@
                 width: 100%;
                 height: calc(100% / 3);
                 background: rgba(0, 0, 0, .9);
-                top: 33.3%;
+                top: calc(100% / 3);
                 transform: translateX(100%);
                 transition: .2s;
                 transition-delay: .3s;

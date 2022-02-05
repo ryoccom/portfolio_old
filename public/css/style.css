@@ -826,7 +826,7 @@ a:focus {
   width: 100%;
   height: 33.3333333333%;
   background: rgba(0, 0, 0, 0.9);
-  top: 33.3%;
+  top: 33.3333333333%;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   -webkit-transition: 0.2s;
@@ -1044,22 +1044,17 @@ a:focus {
   }
 }
 .ningen {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  position: absolute;
+  bottom: -30%;
+  right: 0;
 }
 .ningen img {
   width: 100%;
 }
 .ningen__body {
-  max-width: 350px;
-  margin-bottom: -280px;
-  width: 82%;
+  width: 57%;
   position: relative;
+  margin-left: 40%;
 }
 .ningen__body__arm {
   position: absolute;
@@ -1067,13 +1062,11 @@ a:focus {
   right: 49%;
   top: 11%;
   z-index: 3;
-  max-width: 111px;
 }
 .ningen__body__fukidashi {
   position: absolute;
-  top: -63%;
-  left: -56%;
-  max-width: 350px;
+  top: -45%;
+  left: -70%;
   width: 93%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1139,7 +1132,7 @@ a:focus {
   height: 100%;
 }
 .ningen__body__fukidashi__comment ul li {
-  font-size: 4rem;
+  font-size: 2.8vw;
   width: 0;
   overflow: hidden;
   display: inline-block;
@@ -1153,16 +1146,14 @@ a:focus {
 .ningen__face {
   position: absolute;
   z-index: 1;
-  width: 47%;
-  top: -36%;
-  max-width: 218px;
+  width: 34%;
+  top: -17%;
   right: 5%;
   -webkit-animation: face 3s cubic-bezier(0.17, 0.67, 0.83, 0.67) infinite;
           animation: face 3s cubic-bezier(0.17, 0.67, 0.83, 0.67) infinite;
 }
 .ningen__face__eye__open {
   position: absolute;
-  max-width: 80px;
   width: 38%;
   top: 31%;
   right: 53%;
@@ -1178,7 +1169,6 @@ a:focus {
 }
 .ningen__face__eye__close {
   position: absolute;
-  max-width: 80px;
   width: 39%;
   top: 35%;
   right: 54%;
@@ -1204,12 +1194,12 @@ a:focus {
 }
 .ningen__comment ul li {
   position: absolute;
-  font-size: 2rem;
+  font-size: 1.3vw;
   opacity: 0;
 }
 .ningen__comment__no1 {
-  top: -60%;
-  right: -2%;
+  top: -30%;
+  right: -3%;
   -webkit-animation: fadeIn 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67) forwards;
           animation: fadeIn 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67) forwards;
   -webkit-animation-delay: 9s;
@@ -1217,7 +1207,7 @@ a:focus {
 }
 .ningen__comment__no2 {
   top: 10%;
-  right: 45%;
+  right: 50%;
   -webkit-animation: fadeIn 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67) forwards;
           animation: fadeIn 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67) forwards;
   -webkit-animation-delay: 10s;
@@ -1431,9 +1421,6 @@ a:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
 }
 .mainarea .container:before {
   content: "";
@@ -1448,33 +1435,43 @@ a:focus {
           transform: translate(-50%, -50%);
 }
 .mainarea__title {
-  margin-bottom: 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  margin-right: 5%;
 }
 .mainarea__title h1 {
   border-top: solid 5px #333;
   border-bottom: solid 5px #333;
-  padding: 30px 0;
-  max-width: 400px;
+  padding: 5% 0;
   position: relative;
   width: 70%;
 }
 .mainarea__title__text {
-  padding: 40px 0 80px;
+  padding: 6% 0 0;
 }
 .mainarea__title__text p {
-  font-size: 2.3rem;
+  font-size: 1.4vw;
   font-weight: 500;
   line-height: 2.2;
-}
-@media (max-width: 1023px) {
-  .mainarea__title__text p {
-    font-size: calc(1.6rem + (1vw - 0.48rem) * 0.9894);
-    min-height: 0vw;
-  }
 }
 .mainarea__images {
   position: relative;
   width: 40%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
 }
 .mainarea .thinking {
   position: absolute;
@@ -1485,7 +1482,7 @@ a:focus {
 }
 .mainarea .thinking p {
   font-weight: 700;
-  font-size: 200px;
+  font-size: 13vw;
   color: #eee;
   line-height: 1;
   display: inline-block;
