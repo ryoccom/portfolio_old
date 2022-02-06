@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="115.44" height="138" viewBox="0 0 115.44 138">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f4f433;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 10px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="star.svg" class="cls-1" d="M2141.44,225.068c0,29.153-23.51,63.995-52.72,63.995,29.21,0,52.72,34.84,52.72,63.993,0-29.153,23.51-63.993,52.71-63.993C2164.95,289.063,2141.44,254.221,2141.44,225.068Z" transform="translate(-2083.72 -220.062)"/>
+</svg>
