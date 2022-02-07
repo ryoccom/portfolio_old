@@ -6,12 +6,6 @@
     bottom: -20%;
     width: 100%;
     z-index: 3000;
-    &.js-move{
-        position: fixed;
-        bottom: 15%;
-        width: 37%;
-        transform: scale(.7);
-    }
 
     img {
         width: 100%;

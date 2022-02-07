@@ -28,6 +28,7 @@
     "webpack-fix-style-only-entries": "^0.6.1"
   },
   "dependencies": {
+    "gsap": "^3.9.1",
     "vivus": "^0.4.6"
   },
   "repository": {

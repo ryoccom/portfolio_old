@@ -4,19 +4,31 @@
 .about {
     position: relative;
     overflow: hidden;
+    &.js-active{
+        &:before{
+            width: 100%;
+        }
+        .chair__deco{
+            animation: fadeIn .2s cubic-bezier(.17, .67, .83, .67) forwards;
+        }
+        
+    }
 
     &:before {
         content: '';
         position: absolute;
         top: 20%;
         left: 0;
-        width: 100%;
+        width: 0;
         height: 100vh;
         background-image: url(../img/cloud.svg);
         background-size: 90vw auto;
         animation: bgscroll 30s linear infinite;
         background-repeat: repeat-x;
+        z-index: -1;
+        transition: 3s width;
     }
+    
 
 
     h2 {
@@ -43,6 +55,8 @@
         left: 0;
         width: 100%;
         height: 100%;
+        opacity: 0;
+        
 
         ul {
             li {
@@ -71,5 +85,15 @@
 
     100% {
         background-position: 90vw 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
