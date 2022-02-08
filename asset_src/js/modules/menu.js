@@ -12,4 +12,17 @@ function btnClick(){
 }
 menuTrigger.addEventListener('click', btnClick);
 
+const linkBtn = document.querySelectorAll('.js-link');
+
+function linkClick(){
+    linkBtn.forEach(link => {
+        menu.classList.remove('js-active');
+        menuBtn.classList.add('js-close');
+        cursor.classList.remove('js-menu');
+    });
+}
+
+for (let i = 0; i < linkBtn.length; i++) {
+linkBtn[i].addEventListener('click', linkClick);
+}
 

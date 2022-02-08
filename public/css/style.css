@@ -1410,15 +1410,11 @@ a:focus {
 .wrapper {
   overflow: hidden;
   position: relative;
-  width: 100%;
 }
 
 .mainarea {
   width: 100%;
   height: 100%;
-  padding: 50px;
-  -ms-scroll-snap-type: y mandatory;
-      scroll-snap-type: y mandatory;
 }
 .mainarea:before {
   content: "";
@@ -1451,8 +1447,8 @@ a:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  scroll-snap-align: start;
   height: 100%;
+  padding: 50px;
 }
 .mainarea__title {
   display: -webkit-box;
@@ -1651,4 +1647,23 @@ a:focus {
   100% {
     opacity: 1;
   }
+}
+.works {
+  background: #eeeeee;
+  position: relative;
+  height: calc(100vh - 100px) !important;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.works:before {
+  content: "";
+  height: 50px;
+  width: 100%;
+  background: #eeeeee;
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+}
+.works__title {
+  width: 100%;
 }
