@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1450" height="1174" viewBox="0 0 1450 1174">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: 0.36;
+        mix-blend-mode: multiply;
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="938.651" y1="1174" x2="511.349" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#d8d8d8"/>
+      <stop offset="1" stop-color="#4b494a"/>
+    </linearGradient>
+  </defs>
+  <ellipse id="ana.svg" class="cls-1" cx="725" cy="587" rx="725" ry="587"/>
+</svg>

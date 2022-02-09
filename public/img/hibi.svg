@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1847" height="1424" viewBox="0 0 1847 1424">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: 0.16;
+      }
+
+      .cls-2 {
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 10px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="hibi.svg" class="cls-1">
+    <path id="シェイプ_45" data-name="シェイプ 45" class="cls-2" d="M925,423l210,89,253,180Z" transform="translate(-667 -147)"/>
+    <path id="シェイプ_46" data-name="シェイプ 46" class="cls-2" d="M1144,373l96,45,72,67" transform="translate(-667 -147)"/>
+    <path id="シェイプ_47" data-name="シェイプ 47" class="cls-2" d="M1356,281l161,230-83-172Z" transform="translate(-667 -147)"/>
+    <path id="シェイプ_48" data-name="シェイプ 48" class="cls-2" d="M1681,152l34,203,1,81Z" transform="translate(-667 -147)"/>
+    <path id="シェイプ_49" data-name="シェイプ 49" class="cls-2" d="M1867,416l25-148,53-21Z" transform="translate(-667 -147)"/>
+    <path id="シェイプ_50" data-name="シェイプ 50" class="cls-2" d="M1930,469l38-145,122-57Z" transform="translate(-667 -147)"/>
+    <path id="シェイプ_51" data-name="シェイプ 51" class="cls-2" d="M2037,555l115-143,58-9Z" transform="translate(-667 -147)"/>
+    <path id="シェイプ_52" data-name="シェイプ 52" class="cls-2" d="M1937,757l355-205,166-42Z" transform="translate(-667 -147)"/>
+    <path id="シェイプ_53" data-name="シェイプ 53" class="cls-2" d="M2122,865l236-39,131-95Z" transform="translate(-667 -147)"/>
+    <path id="シェイプ_54" data-name="シェイプ 54" class="cls-2" d="M891,637l274,93L990,650Z" transform="translate(-667 -147)"/>
+    <path id="シェイプ_55" data-name="シェイプ 55" class="cls-2" d="M672,728l255,83,418,75Z" transform="translate(-667 -147)"/>
+    <path id="シェイプ_56" data-name="シェイプ 56" class="cls-2" d="M2138,953l236-11,135-2S2345.15,919.158,2138,953Z" transform="translate(-667 -147)"/>
+    <path id="シェイプ_57" data-name="シェイプ 57" class="cls-2" d="M1986,1051l318,85,159,70Z" transform="translate(-667 -147)"/>
+    <path id="シェイプ_58" data-name="シェイプ 58" class="cls-2" d="M2003,1242l238,269,29,54-199-173Z" transform="translate(-667 -147)"/>
+    <path id="シェイプ_59" data-name="シェイプ 59" class="cls-2" d="M916,1098l468-80-473,8,39,38Z" transform="translate(-667 -147)"/>
+    <path id="シェイプ_60" data-name="シェイプ 60" class="cls-2" d="M1065,1337l58-55,161-77Z" transform="translate(-667 -147)"/>
+    <path id="シェイプ_61" data-name="シェイプ 61" class="cls-2" d="M1152,1504l66-134,141-90Z" transform="translate(-667 -147)"/>
+    <path id="シェイプ_62" data-name="シェイプ 62" class="cls-2" d="M1353,1486l9-62,26-32Z" transform="translate(-667 -147)"/>
+    <path id="シェイプ_63" data-name="シェイプ 63" class="cls-2" d="M1519,1513l77-174-96,143Z" transform="translate(-667 -147)"/>
+    <path id="シェイプ_64" data-name="シェイプ 64" class="cls-2" d="M1697,1542l21-284,39,259-16,49Z" transform="translate(-667 -147)"/>
+    <path id="シェイプ_65" data-name="シェイプ 65" class="cls-2" d="M1866,1365l23,88,51,35Z" transform="translate(-667 -147)"/>
+  </g>
+</svg>

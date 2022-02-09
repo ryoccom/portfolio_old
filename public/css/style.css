@@ -789,6 +789,7 @@ a:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: none;
   position: fixed;
   z-index: 8000;
   pointer-events: none;
@@ -1822,9 +1823,24 @@ a:focus {
 .works {
   background: #eeeeee;
   position: relative;
-  height: calc(100vh - 100px) !important;
+}
+.works__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: calc(100vh - 100px);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .works:before {
   content: "";
@@ -1836,5 +1852,80 @@ a:focus {
   bottom: 100%;
 }
 .works__title {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 4%;
+}
+.works__title h2 {
+  width: 40%;
+}
+.works__title h2 span {
+  display: block;
+  padding-top: 5px;
+}
+.works__title p {
+  width: 100%;
+}
+.works__list {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+.works__list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+.works__list ul li {
+  width: 60%;
+  max-width: 450px;
+}
+.works__list__detail {
+  border: solid 5px #000000;
+  border-radius: 10px;
+  background: #FFF;
+  overflow: hidden;
+}
+.works__list__name {
+  padding: 5%;
+}
+.works__img {
+  position: absolute;
+  bottom: -10%;
+  right: -10%;
+  width: 50%;
+}
+.works__img__ningen {
+  position: absolute;
+  width: 25%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+.works__img__ana {
+  position: absolute;
+  width: 72%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-filter: blur(6px);
+          filter: blur(6px);
+}
+.works__img__hibi {
   width: 100%;
 }
