@@ -9,8 +9,9 @@
 
 .mainarea{
     width: 100%;
-    height: 100%;
-   
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow: auto;
     &:before{
         content: "";
         position: fixed;
@@ -38,8 +39,9 @@
         position:relative;
         display: flex;
         justify-content: center;
-        height: 100%;
+        height: 100vh;
         padding: 50px;
+        scroll-snap-align: start;
     }
 
     &__title{

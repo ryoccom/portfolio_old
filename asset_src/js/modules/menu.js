@@ -8,7 +8,6 @@ function btnClick(){
     menu.classList.toggle('js-active');
     menuBtn.classList.toggle('js-close');
     cursor.classList.toggle('js-menu');
-    
 }
 menuTrigger.addEventListener('click', btnClick);
 

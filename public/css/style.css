@@ -1586,7 +1586,10 @@ a:focus {
 
 .mainarea {
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+  overflow: auto;
 }
 .mainarea:before {
   content: "";
@@ -1619,8 +1622,9 @@ a:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100%;
+  height: 100vh;
   padding: 50px;
+  scroll-snap-align: start;
 }
 .mainarea__title {
   display: -webkit-box;
@@ -1812,17 +1816,16 @@ a:focus {
     background-position: 90vw 0;
   }
 }
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .works {
   background: #eeeeee;
   position: relative;
+  overflow: hidden;
+}
+.works.js-active .works__img__sorry {
+  -webkit-animation: sorry 0.5s cubic-bezier(0.28, 0.99, 0.59, 0.82) forwards;
+          animation: sorry 0.5s cubic-bezier(0.28, 0.99, 0.59, 0.82) forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 .works__wrap {
   display: -webkit-box;
@@ -1870,6 +1873,7 @@ a:focus {
 .works__title h2 span {
   display: block;
   padding-top: 5px;
+  margin-bottom: 2%;
 }
 .works__title p {
   width: 100%;
@@ -1911,10 +1915,11 @@ a:focus {
   position: absolute;
   width: 25%;
   left: 50%;
-  top: 50%;
+  top: -100%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: 1000;
+  opacity: 0;
 }
 .works__img__ana {
   position: absolute;
@@ -1925,7 +1930,72 @@ a:focus {
           transform: translate(-50%, -50%);
   -webkit-filter: blur(6px);
           filter: blur(6px);
+  opacity: 0;
 }
 .works__img__hibi {
   width: 100%;
+  opacity: 0;
+}
+.works__img__sorry {
+  position: absolute;
+  right: 40%;
+  bottom: 61%;
+  width: 18%;
+  opacity: 0;
+  overflow: hidden;
+  -webkit-transform-origin: left bottom;
+          transform-origin: left bottom;
+  -webkit-transform: rotate(316deg);
+          transform: rotate(316deg);
+}
+.works__img__sorry p {
+  font-size: 1.8vw;
+  font-weight: 700;
+  color: #666;
+}
+
+@-webkit-keyframes sorry {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    width: 25%;
+  }
+}
+
+@keyframes sorry {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    width: 25%;
+  }
+}
+@-webkit-keyframes ningen02 {
+  0% {
+    opacity: 0;
+    width: 0;
+    top: -100%;
+  }
+  100% {
+    opacity: 1;
+    width: 20%;
+    top: 50%;
+  }
+}
+@keyframes ningen02 {
+  0% {
+    opacity: 0;
+    width: 0;
+    top: -100%;
+  }
+  100% {
+    opacity: 1;
+    width: 20%;
+    top: 50%;
+  }
 }
