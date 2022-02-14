@@ -2,6 +2,8 @@
 
 .marker {
     position: absolute;
+  
+
     span {
         width: 0;
         height: 35px;
@@ -34,6 +36,7 @@
             opacity: 0;
             animation: fadeIn .1s cubic-bezier(.28,.99,.59,.82) forwards;
             animation-delay: 2s;
+           
         }
 
         &:after {
@@ -41,12 +44,66 @@
             opacity: 0;
             animation: fadeIn .5s cubic-bezier(.28,.99,.59,.82) forwards;
             animation-delay: 2s;
+            
         }
     }
+    &__s{
+        position:relative;
+        display:inline;
+        font-weight:500;
+        &:before{
+            content:"";
+            width: 0;
+            height: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 5px;
+            background: #eaff00;
+            transform: skew(10deg);
+            transform-origin: left bottom;
+            mix-blend-mode: multiply;
+            animation: marker__s .2s cubic-bezier(.28,.99,.59,.82) forwards;
+            animation-delay: 2s;
+            z-index:-2;
+        }
+        
 
-
-
+        span {
+            position:relative;
+        
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                width: 5px;
+                height: 100%;
+                background: darken(config.$activecolor, 10%);
+                border-radius: 50%;
+                filter: blur(1.5px);
+                z-index:-1;
+                
+                opacity:0;
+            }
+    
+            &:before {
+                left: 0;
+                opacity: 0;
+                animation: fadeIn .1s cubic-bezier(.28,.99,.59,.82) forwards;
+                animation-delay: 2s;
+               
+            }
+    
+            &:after {
+                right: -5px;
+                opacity: 0;
+                animation: fadeIn .5s cubic-bezier(.28,.99,.59,.82) 5s forwards;
+                animation-delay: 4s;
+            }
+        }
+    }
 }
+
 
 @keyframes marker {
     0% {
@@ -55,6 +112,15 @@
 
     100% {
         width: calc(100% + 40px);
+    }
+}
+@keyframes marker__s {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
     }
 }
 

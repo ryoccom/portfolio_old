@@ -1,0 +1,43 @@
+<svg id="you.svg" xmlns="http://www.w3.org/2000/svg" width="261.38" height="376" viewBox="0 0 261.38 376">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke-linecap: round;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke: #000;
+        fill-rule: evenodd;
+      }
+
+      .cls-1, .cls-3 {
+        stroke-linejoin: round;
+        stroke-width: 8px;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #2d1d0c;
+      }
+
+      .cls-2 {
+        stroke-width: 10px;
+      }
+
+      .cls-3 {
+        stroke-linecap: square;
+      }
+    </style>
+  </defs>
+  <path id="シェイプ_69" data-name="シェイプ 69" class="cls-1" d="M1368,693l-14-113-62-22,10,109-83,37Z" transform="translate(-1194.62 -337.406)"/>
+  <path id="シェイプ_73" data-name="シェイプ 73" class="cls-2" d="M1295,618l2-28s88.03-5.544,86,6,9.43-2.258,3,7,104.06-108.823,31-196c-74.96-89.443-95.97-65.8-154-47S1142.44,519.675,1295,618Z" transform="translate(-1194.62 -337.406)"/>
+  <path id="シェイプ_74" data-name="シェイプ 74" class="cls-3" d="M1275,357l41,54" transform="translate(-1194.62 -337.406)"/>
+  <path id="シェイプ_70" data-name="シェイプ 70" class="cls-1" d="M1452,666s-46.97-39.628-59-40-58.53,28.288-92-4-94,81-94,81S1423.2,732.218,1452,666Z" transform="translate(-1194.62 -337.406)"/>
+  <path id="face_のコピー" data-name="face のコピー" class="cls-1" d="M1414.3,469.655s52.7,81.56-2.81,119.354-115.21,24.248-133.95-23.04c0,0-28.96,20.109-35.64,1.846s0.44-46.052,24.16-29.588l-10.58-40.318s-4.5-70.325,38.03-84.089C1356.68,393.373,1387.37,410.288,1414.3,469.655Z" transform="translate(-1194.62 -337.406)"/>
+  <path id="シェイプ_75" data-name="シェイプ 75" class="cls-1" d="M1360,487s9.81,22.97,20,20-2,19-2,19" transform="translate(-1194.62 -337.406)"/>
+  <path id="シェイプ_76" data-name="シェイプ 76" class="cls-1" d="M1344,559s33.92,7.954,50-22" transform="translate(-1194.62 -337.406)"/>
+  <path id="シェイプ_77" data-name="シェイプ 77" class="cls-1" d="M1314,511s0.87-11.054,16-7" transform="translate(-1194.62 -337.406)"/>
+  <path id="シェイプ_77_のコピー" data-name="シェイプ 77 のコピー" class="cls-1" d="M1379,487s0.87-11.054,16-7" transform="translate(-1194.62 -337.406)"/>
+  <path id="シェイプ_78" data-name="シェイプ 78" class="cls-1" d="M1314,472s-30.09-9.781-29,25" transform="translate(-1194.62 -337.406)"/>
+  <path id="シェイプ_78_のコピー" data-name="シェイプ 78 のコピー" class="cls-1" d="M1387,447s-30.09-9.781-29,25" transform="translate(-1194.62 -337.406)"/>
+</svg>

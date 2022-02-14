@@ -2,6 +2,7 @@
 $textcolor: #000000;
 $activecolor: #f4f433;
 $subcolor: #eeeeee;
+$bluecolor: #7dded8;
 
 //wrappersize
 $sizel:1280px;
@@ -15,4 +16,10 @@ $breakpoints: (
 );
 
 
+//mediaquery
+@mixin mq($breakpoint: sm) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+      @content;
+    }
+};
 

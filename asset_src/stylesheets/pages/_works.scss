@@ -4,11 +4,12 @@
 .works {
     background: config.$subcolor;
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
+    border-top: dashed 3px config.$textcolor;
 
     &.js-active{
         .works__img__sorry{
-            animation: sorry .5s cubic-bezier(.28,.99,.59,.82) forwards;
+            animation: sorry .5s linear forwards;
             animation-delay: 1s;
         }
     }
@@ -20,6 +21,7 @@
         height: calc(100vh - 100px);
         flex-direction: column;
         justify-content: center;
+        width: 100%;
     }
 
     &:before {
@@ -38,10 +40,13 @@
         justify-content: center;
         text-align: center;
         flex-wrap: wrap;
-        margin-bottom: 4%;
+        margin-bottom: 2%;
 
         h2 {
-            width: 40%;
+            width: 12%;
+            @include config.mq(md){
+                width: 30%;
+            }
 
             span {
                 display: block;
@@ -51,7 +56,12 @@
         }
 
         p {
-            width: 100%
+            width: 100%;
+            font-size:1.2vw;
+            font-weight: 500;
+            @include config.mq(md){
+                font-size: 2.3vw;
+            }
         }
     }
 
@@ -66,8 +76,11 @@
             width: 100%;
 
             li {
-                width: 60%;
-                max-width: 450px;
+                width: 40%;
+                max-width: 320px;
+                @include config.mq(md){
+                    width: 50%;
+                }
             }
         }
 
@@ -80,6 +93,13 @@
 
         &__name {
             padding: 5%;
+            h3{
+                font-size: 1.4vw;
+                font-weight: 700;
+            }
+            p{
+                font-size: 1.2vw;
+            }
         }
     }
 
@@ -88,6 +108,9 @@
         bottom: -10%;
         right: -10%;
         width: 50%;
+        @include config.mq(md){
+            width: 80%;
+        }
 
         &__ningen {
             position: absolute;
@@ -119,9 +142,8 @@
             position: absolute;
             right: 40%;
             bottom: 61%;
-            width: 18%;
+            width: 25%;
             opacity: 0;
-            overflow: hidden;
             transform-origin: left bottom;
             transform: rotate(316deg);
             p {
@@ -138,12 +160,12 @@
 @keyframes sorry {
     0% {
        opacity: 0;
-       width: 0;
+     
     }
 
     100% {
         opacity: 1;
-        width: 25%;
+        
     }
 }
 

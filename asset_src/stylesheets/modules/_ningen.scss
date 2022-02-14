@@ -81,7 +81,9 @@
             position: absolute;
             font-size: 1.3vw;
             opacity: 0;
-        
+            @include config.mq(md){
+                font-size: 2vw;
+            }
         }
     }
 
@@ -89,14 +91,14 @@
         bottom: 50%;
         right: -17%;
         animation: fadeIn .5s cubic-bezier(.17, .67, .83, .67) forwards;
-        animation-delay: 9s;
+        animation-delay: 14s;
     }
 
     &__no2 {
         bottom: 35%;
         left: 10%;
         animation: fadeIn .5s cubic-bezier(.17, .67, .83, .67) forwards;
-        animation-delay: 10s;
+        animation-delay: 15s;
     }
 }
 
@@ -110,11 +112,11 @@
     justify-content: center;
     z-index: 5;
     animation: fuwafuwa 3s infinite ease-in-out;
-    animation-delay: 3s;
+    animation-delay: 8s;
 
     img {
         animation: fukidashi 1s ease-out forwards;
-        animation-delay: 2s;
+        animation-delay: 7s;
         opacity: 0;
     }
 
@@ -134,7 +136,7 @@
         top: 88%;
         width: 9%;
         height: 12%;
-        animation-delay: 1.5s;
+        animation-delay: 6.5s;
     }
 
     &:after {
@@ -142,7 +144,7 @@
         top: 100%;
         width: 6%;
         height: 8%;
-        animation-delay: 1s;
+        animation-delay: 6s;
     }
 
     &__comment {
@@ -163,9 +165,12 @@
                 overflow: hidden;
                 display: inline-block;
                 animation: dots 6s cubic-bezier(.17, .67, .83, .67) infinite;
-                animation-delay: 3s;
+                animation-delay: 9s;
                 text-align: center;
                 font-weight: 700;
+                @include config.mq(md){
+                    font-size: 3.5vw;
+                }
                 &:not(:first-child){
                     display: none;
                 }

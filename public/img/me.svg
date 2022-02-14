@@ -1,0 +1,50 @@
+<svg id="me.svg" xmlns="http://www.w3.org/2000/svg" width="294.65" height="347.218" viewBox="0 0 294.65 347.218">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #2d1d0c;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        stroke: #000;
+        fill-rule: evenodd;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke-width: 8px;
+      }
+
+      .cls-2, .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: none;
+      }
+
+      .cls-5 {
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <g id="グループ_1" data-name="グループ 1">
+    <path id="hair_のコピー" data-name="hair のコピー" class="cls-1" d="M1839.89,528.531s-31.27,118.738-68.13,114.283,13.7,16.5,70.4,27.324,129.91-13.522,129.91-13.522S2053.85,443.117,1839.89,528.531Z" transform="translate(-1755.19 -366.188)"/>
+    <path id="シェイプ_69" data-name="シェイプ 69" class="cls-2" d="M1863,693l14-113,62-22,79,69-6,77Z" transform="translate(-1755.19 -366.188)"/>
+    <path id="シェイプ_70" data-name="シェイプ 70" class="cls-2" d="M1779,666s46.97-39.628,59-40,58.53,28.288,92-4,94,81,94,81S1807.8,732.218,1779,666Z" transform="translate(-1755.19 -366.188)"/>
+    <path id="face_のコピー" data-name="face のコピー" class="cls-2" d="M1816.7,469.655s-52.7,81.56,2.81,119.354,115.21,24.248,133.95-23.04c0,0,28.96,20.109,35.64,1.846s-0.44-46.052-24.16-29.588l10.58-40.318s4.5-70.325-38.03-84.089C1874.32,393.373,1843.63,410.288,1816.7,469.655Z" transform="translate(-1755.19 -366.188)"/>
+    <path id="hair_のコピー-2" data-name="hair のコピー" class="cls-1" d="M1822.64,433.049l134.35,44.872,19.4-21.249s-23.54,188.166-91.77,223.108c0,0,106.08,39.323,130.58-28.107s69.3-238.843-36.68-275.264C1978.52,376.409,1858.9,342.449,1822.64,433.049Z" transform="translate(-1755.19 -366.188)"/>
+    <path id="nose_のコピー" data-name="nose のコピー" class="cls-2" d="M1844.68,509.052s9.62-19.459,19.47,4.952" transform="translate(-1755.19 -366.188)"/>
+    <path id="mouth_のコピー" data-name="mouth のコピー" class="cls-3" d="M1820.66,529.23l6.28-4.89s3.8,18.5,27.13,22.266,24.49-4.764,24.49-4.764l5.48,11.121" transform="translate(-1755.19 -366.188)"/>
+    <path id="eyeblow_のコピー" data-name="eyeblow のコピー" class="cls-2" d="M1827.42,448.018l28.41,7.9" transform="translate(-1755.19 -366.188)"/>
+    <path id="eyeblow02_のコピー" data-name="eyeblow02 のコピー" class="cls-2" d="M1933.68,482.345l-26.41-9.7" transform="translate(-1755.19 -366.188)"/>
+    <path id="楕円形_1_のコピー_4" data-name="楕円形 1 のコピー 4" class="cls-4" d="M1839.02,464.069c3.26,0.706,4.63,6.69,3.06,13.366s-5.47,11.516-8.73,10.81-4.63-6.69-3.07-13.366S1835.76,463.363,1839.02,464.069Z" transform="translate(-1755.19 -366.188)"/>
+    <path id="楕円形_1_のコピー_4-2" data-name="楕円形 1 のコピー 4" class="cls-4" d="M1907.23,483.77c3.26,0.706,4.63,6.69,3.06,13.366s-5.48,11.516-8.74,10.81-4.63-6.69-3.06-13.366S1903.97,483.064,1907.23,483.77Z" transform="translate(-1755.19 -366.188)"/>
+    <path id="シェイプ_71" data-name="シェイプ 71" class="cls-5" d="M1833,478s12.26,1.275,12-6S1833,464.26,1833,478Z" transform="translate(-1755.19 -366.188)"/>
+    <path id="シェイプ_71_のコピー" data-name="シェイプ 71 のコピー" class="cls-5" d="M1897,498s12.26,1.275,12-6S1897,484.26,1897,498Z" transform="translate(-1755.19 -366.188)"/>
+  </g>
+</svg>
