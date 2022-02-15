@@ -86,7 +86,7 @@
             top: 5%;
         }
         @include config.mq(sm){
-            top: 4%;
+            top: -1%;
         }
        
         h1{

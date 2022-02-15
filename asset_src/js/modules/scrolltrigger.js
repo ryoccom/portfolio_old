@@ -12,56 +12,78 @@ ScrollTrigger.defaults({
 });
 
 //ningen scroll trigger
+ScrollTrigger.matchMedia({
+  "(min-width: 1024px)": function () {
+    gsap.to('.js-ningen', {
+      bottom: '-109%',
+      scale: '.7',
+      scrollTrigger: {
+        trigger: '.top',
+        start: 'top top',
+        end: 'bottom 20%',
+        scrub: true,
+        onLeave: () => {
+          ningen.style.zIndex = '1000';
+        },
+        onEnterBack: () => {
+          ningen.style.zIndex = '3000';
+        },
+      }
+    });
+  },
+  // 599px以下
+  "(max-width: 1023px)": function () {
+    gsap.to('.js-ningen', {
+      bottom: '-200%',
+      scale: '.7',
+      scrollTrigger: {
+        trigger: '.top',
+        start: 'top top',
+        end: 'bottom 20%',
+        scrub: true,
+        onLeave: () => {
+          ningen.style.zIndex = '1000';
+        },
+        onEnterBack: () => {
+          ningen.style.zIndex = '3000';
+        },
+      }
+    });
+  },
 
-gsap.to('.js-ningen', {
-  bottom: '-212%',
-  scale: '.7',
-  scrollTrigger: {
-    trigger: '.top',
-    start: 'top top',
-    end: 'bottom 20%',
-    scrub: true,
-    onLeave: () => {
-      ningen.style.zIndex = '1000';
-    },
-    onEnterBack: () => {
-      ningen.style.zIndex = '3000';
-    },
-  }
-});
-
-gsap.to('.about', {
-  scrollTrigger: {
-    trigger: '.about',
-    toggleClass: 'js-active',
-    start: 'top 20%',
-  }
-});
-
-gsap.to('.js-fade', {
-  opacity: 1,
-  scrollTrigger: {
-    trigger: '.works',
-    start: 'top 20%',
-    end: 'bottom bottom',
-    scrub: true
-  }
-});
-gsap.to('.js-ningen2', {
-  top: '50%',
-  opacity: 1,
-  scrollTrigger: {
-    trigger: '.works',
-    start: 'top 20%',
-    end: 'bottom bottom',
-    scrub: true,
-  }
-});
-
-gsap.to('.works', {
-  scrollTrigger: {
-    trigger: '.works',
-    toggleClass: 'js-active',
-    start: 'top 20%',
+  "all": function () {
+    gsap.to('.about', {
+      scrollTrigger: {
+        trigger: '.about',
+        toggleClass: 'js-active',
+        start: 'top 20%',
+      }
+    });
+    gsap.to('.js-fade', {
+      opacity: 1,
+      scrollTrigger: {
+        trigger: '.works',
+        start: 'top 20%',
+        end: 'bottom bottom',
+        scrub: true
+      }
+    });
+    gsap.to('.js-ningen2', {
+      top: '50%',
+      opacity: 1,
+      scrollTrigger: {
+        trigger: '.works',
+        start: 'top 20%',
+        end: 'bottom bottom',
+        scrub: true,
+      }
+    });
+    gsap.to('.works', {
+      scrollTrigger: {
+        trigger: '.works',
+        toggleClass: 'js-active',
+        start: 'top 20%',
+      }
+    });
   }
 });

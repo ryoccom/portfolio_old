@@ -1886,7 +1886,7 @@ a:focus {
 }
 @media screen and (max-width: 767px) {
   .mainarea__title {
-    top: 4%;
+    top: -1%;
   }
 }
 .mainarea__title h1 {
@@ -2061,6 +2061,11 @@ a:focus {
   background-repeat: repeat-x;
   border-top: dashed 3px #000000;
 }
+@media screen and (max-width: 767px) {
+  .about {
+    background-size: 130%;
+  }
+}
 .about.js-active:before {
   width: 100%;
 }
@@ -2116,7 +2121,7 @@ a:focus {
 @media screen and (max-width: 767px) {
   .chair {
     bottom: -75px;
-    width: 63%;
+    width: 72%;
     right: -4%;
   }
 }
@@ -2522,6 +2527,7 @@ a:focus {
 @media screen and (max-width: 767px) {
   .contact__talk {
     width: 100%;
+    margin: 8% 0 5%;
   }
 }
 .contact__talk ul {
@@ -2537,6 +2543,11 @@ a:focus {
           align-items: flex-start;
   width: 100%;
   margin-bottom: 1%;
+}
+@media screen and (max-width: 767px) {
+  .contact__talk ul li {
+    margin-bottom: 3%;
+  }
 }
 .contact__talk ul li p {
   background: #FFF;

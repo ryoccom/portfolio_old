@@ -61,6 +61,7 @@
        }
        @include config.mq(sm){
            width: 100%;
+           margin: 8% 0 5%;
        }
        
         ul{
@@ -71,6 +72,9 @@
                 align-items: flex-start;
                 width: 100%;
                 margin-bottom: 1%;
+                @include config.mq(sm){
+                    margin-bottom: 3%;
+                }
                 p{
                     background: #FFF;
                     line-height: 1;
