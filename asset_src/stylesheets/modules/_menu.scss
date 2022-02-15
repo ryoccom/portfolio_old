@@ -31,6 +31,9 @@
                         font-weight: 700;
                         transition: .2s;
                         position: relative;
+                        @include config.mq(sm){
+                            font-size: 2rem;
+                        }
 
                         &:after {
                             content: "";
@@ -117,9 +120,18 @@
         overflow: hidden;
         transition: .2s;
 
+        @include config.mq(sm){
+            width: 75px;
+            height: 75px;
+            top: 10px;
+            right: 10px;
+        }
 
         &:hover {
             background: config.$activecolor;
+            @include config.mq(sm){
+                background: #ddd;
+            }
 
             .js-close {
                 button {
@@ -146,6 +158,11 @@
             width: 40px;
             height: 40px;
             position: relative;
+            @include config.mq(sm){
+                width: 30px;
+                height: 30px;
+                top: -3px;
+            }
 
             button {
                 appearance: none;
@@ -155,6 +172,10 @@
                 position: relative;
                 border: none;
                 outline: none;
+                @include config.mq(sm){
+                    width: 30px;
+                    height: 30px;
+                }
 
 
                 &:before {
@@ -167,6 +188,10 @@
                     position: absolute;
                     top: 16px;
                     right: 0;
+                    @include config.mq(sm){
+                        width: 30px;
+                        top: 17px;
+                    }
                 }
             }
 
@@ -183,11 +208,15 @@
             &:before {
                 top: 10px;
                 width: 20px;
+                
             }
 
             &:after {
                 bottom: 10px;
                 width: 40px;
+                @include config.mq(sm){
+                    width: 25px;
+                }
             }
         }
     }
@@ -219,6 +248,9 @@
     .menu__toggle {
         &:hover {
             background: config.$subcolor;
+            @include config.mq(sm){
+                background: #ddd;
+            }
         }
 
         &__btn {
@@ -242,6 +274,11 @@
                     animation: close .05s linear forwards;
                     animation-delay: .05s;
                     display: block;
+                    @include config.mq(sm){
+                        font-size: 2.4rem;
+                        margin-left: -2px;
+                        margin-top: 2px;
+                    }
 
                 }
             }

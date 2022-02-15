@@ -47,11 +47,19 @@
             @include config.mq(md){
                 width: 30%;
             }
+            @include config.mq(sm){
+                width: 40%;
+                line-height: 1;
+                margin-bottom: 10px;
+            }
 
             span {
                 display: block;
                 padding-top: 5px;
                 margin-bottom: 2%;
+                @include config.mq(sm){
+                    padding-top: 8px;
+                }
             }
         }
 
@@ -62,6 +70,12 @@
             @include config.mq(md){
                 font-size: 2.3vw;
             }
+            @include config.mq(sm){
+                font-size: 3vw;
+                br{
+                    display: none;
+                }
+            }
         }
     }
 
@@ -69,6 +83,9 @@
         position: relative;
         z-index: 1;
         width: 100%;
+        @include config.mq(sm){
+            margin-top: 10px;
+        }
 
         ul {
             display: flex;
@@ -81,6 +98,9 @@
                 @include config.mq(md){
                     width: 50%;
                 }
+                @include config.mq(sm){
+                    width: 85%;
+                }
             }
         }
 
@@ -89,6 +109,9 @@
             border-radius: 10px;
             background: #FFF;
             overflow: hidden;
+            @include config.mq(sm){
+                border: solid 3px config.$textcolor;;
+            }
         }
 
         &__name {
@@ -96,9 +119,16 @@
             h3{
                 font-size: 1.4vw;
                 font-weight: 700;
+                @include config.mq(sm){
+                    font-size: 3.2vw;
+                }
             }
+            
             p{
                 font-size: 1.2vw;
+                @include config.mq(sm){
+                    font-size: 3vw;
+                }
             }
         }
     }
@@ -111,6 +141,11 @@
         @include config.mq(md){
             width: 80%;
         }
+        @include config.mq(sm){
+            width: 100%;
+            bottom: -8%;
+           
+        }
 
         &__ningen {
             position: absolute;
@@ -120,6 +155,9 @@
             transform: translate(-50%, -50%);
             z-index: 1000;
             opacity: 0;
+            @include config.mq(sm){
+               left: 54%;
+            }
 
         }
 
@@ -146,11 +184,14 @@
             opacity: 0;
             transform-origin: left bottom;
             transform: rotate(316deg);
+            z-index: 1;
+            @include config.mq(sm){
+                right: 35%;
+            }
             p {
                 font-size: 1.8vw;
                 font-weight: 700;
                 color: #666;
-                
             }
         }
     }

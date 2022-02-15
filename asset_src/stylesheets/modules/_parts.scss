@@ -16,6 +16,9 @@
         mix-blend-mode: multiply;
         animation: marker .3s cubic-bezier(.28,.99,.59,.82) forwards;
         animation-delay: 2s;
+        @include config.mq(){
+            height: 20px;
+        }
 
         &:before,
         &:after {
@@ -28,7 +31,9 @@
             background: darken(config.$activecolor, 10%);
             border-radius: 50%;
             filter: blur(1.5px);
-
+            @include config.mq(){
+                width: 10px;
+            }
         }
 
         &:before {

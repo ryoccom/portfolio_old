@@ -45,6 +45,9 @@
         background-repeat: repeat-x;
         z-index: -1;
         transition: 3s width;
+        @include config.mq(sm){
+            top: 55%;
+        }
     }
     
 
@@ -67,6 +70,11 @@
     bottom: -50px;
     width: 53%;
     right: 5%;
+    @include config.mq(sm){
+        bottom: -75px;
+        width: 63%;
+        right: -4%;
+    }
 
     &__deco {
         position: absolute;
@@ -85,12 +93,19 @@
                     width: 11%;
                     left: 0%;
                     top: -124%;
+                    @include config.mq(sm){
+                        top:-134%
+                    }
                 }
 
                 &:last-child {
                     width: 9%;
                     left: 10%;
                     top: -109%;
+                    @include config.mq(sm){
+                        top:-119%;
+                        left:8%;
+                    }
                 }
             }
         }

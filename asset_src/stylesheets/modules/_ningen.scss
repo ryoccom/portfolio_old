@@ -6,7 +6,9 @@
     bottom: -20%;
     width: 100%;
     z-index: 3000;
-
+    @include config.mq(sm){
+        bottom: -32%;
+    }
     img {
         width: 100%;
     }
@@ -14,6 +16,10 @@
         width: 57%;
         position: relative;
         margin-left: 37%;
+        @include config.mq(sm){
+            width: 70%;
+            margin-left: 27%;
+        }
        
     }
     &__arm {
@@ -75,6 +81,9 @@
     height: 100%;
     top: 0;
     right: 0;
+    @include config.mq(sm){
+        display: none;
+    }
 
     ul {
         li {
@@ -92,6 +101,10 @@
         right: -17%;
         animation: fadeIn .5s cubic-bezier(.17, .67, .83, .67) forwards;
         animation-delay: 14s;
+        @include config.mq(sm){
+            bottom: 79%;
+            right: -4%;
+        }
     }
 
     &__no2 {
@@ -173,6 +186,9 @@
                 }
                 &:not(:first-child){
                     display: none;
+                }
+                @include config.mq(sm){
+                    font-size: 4.8vw;
                 }
             }
         }
