@@ -1,0 +1,75 @@
+@use "../config/config"as config;
+
+.scroll {
+    display: inline-block;
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 6000;
+    font-weight: 700;
+    font-size: 2.6rem;
+    text-align: center;
+    
+
+
+    @include config.mq(md) {
+        width: auto;
+        left: 5px;
+        font-size: 2.3rem;
+        -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+    }
+    @include config.mq(sm) {
+        font-size: 1.2rem;
+        left: 3px;
+        bottom: 30px;
+    }
+
+
+    &:before,
+    &:after {
+        content: "▼";
+        position: absolute;
+        line-height: 1;
+        left: 50%;
+        transform: translateX(-50%);
+        font-weight: 700;
+        color: config.$textcolor;
+
+    }
+
+    &:before {
+        bottom: -20px;
+        z-index: 1;
+        @include config.mq(md) {
+            bottom: -35px;
+        }
+        @include config.mq(sm) {
+            bottom:-15px
+        }
+    }
+
+    &:after {
+        bottom: -35px;
+        @include config.mq(md) {
+            bottom: -50px;
+        }
+        @include config.mq(sm) {
+            bottom:-25px
+        }
+
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
