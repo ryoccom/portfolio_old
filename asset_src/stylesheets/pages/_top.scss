@@ -85,9 +85,7 @@
             align-items: center;
             top: 5%;
         }
-        @include config.mq(sm){
-            top: -1%;
-        }
+        
        
         h1{
             border-top: solid 5px #333;

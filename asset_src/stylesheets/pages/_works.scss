@@ -22,6 +22,8 @@
         flex-direction: column;
         justify-content: center;
         width: 100%;
+       
+        
     }
 
     &:before {
@@ -41,9 +43,13 @@
         text-align: center;
         flex-wrap: wrap;
         margin-bottom: 2%;
+        @include config.mq(sm){
+            margin-top: -23%;
+        }
 
         h2 {
-            width: 12%;
+            width: 15%;
+            
             @include config.mq(md){
                 width: 30%;
             }
@@ -51,6 +57,7 @@
                 width: 40%;
                 line-height: 1;
                 margin-bottom: 10px;
+                font-size: 4vw;
             }
 
             span {
@@ -58,7 +65,7 @@
                 padding-top: 5px;
                 margin-bottom: 2%;
                 @include config.mq(sm){
-                    padding-top: 8px;
+                    padding-top: 10px;
                 }
             }
         }
@@ -72,6 +79,7 @@
             }
             @include config.mq(sm){
                 font-size: 3vw;
+                padding-top: 6%;
                 br{
                     display: none;
                 }
@@ -84,8 +92,8 @@
         z-index: 1;
         width: 100%;
         @include config.mq(sm){
-            margin-top: 10px;
-        }
+            padding-top: 6%;
+         }
 
         ul {
             display: flex;
@@ -94,9 +102,10 @@
 
             li {
                 width: 40%;
-                max-width: 320px;
+                max-width: 340px;
                 @include config.mq(md){
                     width: 50%;
+                    max-width: 320px;
                 }
                 @include config.mq(sm){
                     width: 85%;

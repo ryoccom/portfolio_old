@@ -25,7 +25,8 @@
                 display: block;
                 padding-top: 5px;
                 @include config.mq(sm){
-                    padding-top: 8px;
+                    padding-top: 10px;
+                    font-size: 4vw;
                 }
             }
             @include config.mq(md){
@@ -56,7 +57,7 @@
        width: 45%;
        max-width: 480px;
        @include config.mq(md){
-           margin: 5% 0 3%;
+           margin: 6% 0 3%;
            width: 55%;
        }
        @include config.mq(sm){
@@ -159,6 +160,7 @@
             }
             @include config.mq(sm){
                 font-size: 3vw;
+                line-height: 2.3;
                 br{
                     display: none;
                 }

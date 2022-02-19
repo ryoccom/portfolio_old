@@ -3,12 +3,10 @@
 
 .ningen {
     position: absolute;
-    bottom: -20%;
+    bottom:0;
     width: 100%;
     z-index: 3000;
-    @include config.mq(sm){
-        bottom: -32%;
-    }
+    
     img {
         width: 100%;
     }
@@ -16,9 +14,11 @@
         width: 57%;
         position: relative;
         margin-left: 37%;
+        margin-bottom: -23%;
         @include config.mq(sm){
             width: 70%;
             margin-left: 27%;
+            margin-bottom: -33%;
         }
        
     }

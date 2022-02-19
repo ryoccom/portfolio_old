@@ -13,9 +13,27 @@ ScrollTrigger.defaults({
 
 //ningen scroll trigger
 ScrollTrigger.matchMedia({
-  "(min-width: 1024px)": function () {
+  "(min-width: 1201px)": function () {
     gsap.to('.js-ningen', {
-      bottom: '-109%',
+      bottom: '-95%',
+      scale: '.7',
+      scrollTrigger: {
+        trigger: '.top',
+        start: 'top top',
+        end: 'bottom 20%',
+        scrub: true,
+        onLeave: () => {
+          ningen.style.zIndex = '1000';
+        },
+        onEnterBack: () => {
+          ningen.style.zIndex = '3000';
+        },
+      }
+    });
+  },
+  "(max-width: 1200px)": function () {
+    gsap.to('.js-ningen', {
+      bottom: '-102%',
       scale: '.7',
       scrollTrigger: {
         trigger: '.top',
@@ -34,7 +52,7 @@ ScrollTrigger.matchMedia({
   // 599px以下
   "(max-width: 1023px)": function () {
     gsap.to('.js-ningen', {
-      bottom: '-200%',
+      bottom: '-178%',
       scale: '.7',
       scrollTrigger: {
         trigger: '.top',
