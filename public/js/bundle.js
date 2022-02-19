@@ -16,7 +16,7 @@
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_cursor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/cursor */ \"./asset_src/js/modules/cursor.js\");\n/* harmony import */ var _modules_cursor__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_cursor__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _modules_menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/menu */ \"./asset_src/js/modules/menu.js\");\n/* harmony import */ var _modules_menu__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_menu__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _modules_ningen__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/ningen */ \"./asset_src/js/modules/ningen.js\");\n/* harmony import */ var _modules_ningen__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_ningen__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _modules_scrolltrigger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/scrolltrigger */ \"./asset_src/js/modules/scrolltrigger.js\");\n/* harmony import */ var _modules_smoothscroll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/smoothscroll */ \"./asset_src/js/modules/smoothscroll.js\");\n/* harmony import */ var _modules_smoothscroll__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_smoothscroll__WEBPACK_IMPORTED_MODULE_4__);\n\n\n\n\n\n\n//# sourceURL=webpack://portfolio/./asset_src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_cursor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/cursor */ \"./asset_src/js/modules/cursor.js\");\n/* harmony import */ var _modules_cursor__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_cursor__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _modules_menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/menu */ \"./asset_src/js/modules/menu.js\");\n/* harmony import */ var _modules_menu__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_menu__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _modules_ningen__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/ningen */ \"./asset_src/js/modules/ningen.js\");\n/* harmony import */ var _modules_ningen__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_ningen__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _modules_scrolltrigger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/scrolltrigger */ \"./asset_src/js/modules/scrolltrigger.js\");\n/* harmony import */ var _modules_smoothscroll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/smoothscroll */ \"./asset_src/js/modules/smoothscroll.js\");\n/* harmony import */ var _modules_smoothscroll__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_smoothscroll__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _modules_spcheck__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/spcheck */ \"./asset_src/js/modules/spcheck.js\");\n/* harmony import */ var _modules_spcheck__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_modules_spcheck__WEBPACK_IMPORTED_MODULE_5__);\n\n\n\n\n\n\n\n//# sourceURL=webpack://portfolio/./asset_src/js/index.js?");
 
 /***/ }),
 
@@ -68,6 +68,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var gsap
 /***/ (function() {
 
 eval("// import smoothscroll from 'smoothscroll-polyfill';\n// smoothscroll.polyfill();\nvar jsSmoothScroll = document.querySelectorAll('a[href^=\"#\"]');\nvar linkArea = document.querySelector('.mainarea');\n\nvar _loop = function _loop(i) {\n  jsSmoothScroll[i].addEventListener('click', function (e) {\n    e.preventDefault();\n    var href = jsSmoothScroll[i].getAttribute('href');\n    var target = document.getElementById(href.replace('#', ''));\n    var height = target.getBoundingClientRect().height;\n    var position = i * height;\n\n    var countUp = function countUp() {\n      linkArea.scrollTo({\n        top: position,\n        behavior: 'smooth'\n      });\n    };\n\n    setTimeout(countUp, 800);\n  });\n};\n\nfor (var i = 0; i < jsSmoothScroll.length; i++) {\n  _loop(i);\n}\n\n//# sourceURL=webpack://portfolio/./asset_src/js/modules/smoothscroll.js?");
+
+/***/ }),
+
+/***/ "./asset_src/js/modules/spcheck.js":
+/*!*****************************************!*\
+  !*** ./asset_src/js/modules/spcheck.js ***!
+  \*****************************************/
+/***/ (function() {
+
+eval("function isMobile() {\n  var ua = navigator.userAgent;\n  return ua.indexOf('iPhone') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0;\n}\n\nif (isMobile()) {\n  document.body.classList.add('is-mobile');\n}\n\n//# sourceURL=webpack://portfolio/./asset_src/js/modules/spcheck.js?");
 
 /***/ }),
 
