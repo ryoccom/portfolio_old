@@ -1920,6 +1920,8 @@ a:focus {
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
   overflow: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 .mainarea:before {
   content: "";
@@ -1963,9 +1965,10 @@ a:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100vh;
+  height: 100%;
   padding: 50px;
   scroll-snap-align: start;
+  overflow: visible;
 }
 @media screen and (max-width: 820px) {
   .mainarea .container {
@@ -2100,6 +2103,11 @@ a:focus {
 @media screen and (max-width: 820px) {
   .mainarea .thinking {
     bottom: 8%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .mainarea .thinking {
+    bottom: 15%;
   }
 }
 .mainarea .thinking p {
@@ -2328,7 +2336,7 @@ a:focus {
 .works {
   background: #eeeeee;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
   border-top: dashed 3px #000000;
 }
 .works.js-active .works__img__sorry {
@@ -2355,15 +2363,6 @@ a:focus {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-}
-.works:before {
-  content: "";
-  height: 50px;
-  width: 100%;
-  background: #eeeeee;
-  position: absolute;
-  left: 0;
-  bottom: 100%;
 }
 .works__title {
   width: 100%;

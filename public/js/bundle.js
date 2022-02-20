@@ -87,7 +87,7 @@ eval("// import smoothscroll from 'smoothscroll-polyfill';\n// smoothscroll.poly
   \*****************************************/
 /***/ (function() {
 
-eval("function isMobile() {\n  var ua = navigator.userAgent;\n  return ua.indexOf('iPhone') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0;\n}\n\nif (isMobile()) {\n  document.body.classList.add('is-mobile');\n}\n\n//# sourceURL=webpack://portfolio/./asset_src/js/modules/spcheck.js?");
+eval("function isMobile() {\n  var ua = navigator.userAgent;\n  return ua.indexOf('iPhone') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0;\n}\n\nif (isMobile()) {\n  document.body.classList.add('is-mobile');\n}\n\nvar contentBox = document.querySelector('.mainarea');\nvar wrapper = document.querySelector('.wrapper');\n\nvar setFillHeight = function setFillHeight() {\n  var vh = window.innerHeight; // for (let i = 0; i < contentBox.length; i++) {\n  //     contentBox[i].style.height = vh + 'px';\n  // }\n\n  contentBox.style.height = vh + 'px';\n  wrapper.style.height = vh + 'px';\n};\n\nwindow.addEventListener('resize', setFillHeight);\nsetFillHeight();\n\n//# sourceURL=webpack://portfolio/./asset_src/js/modules/spcheck.js?");
 
 /***/ }),
 

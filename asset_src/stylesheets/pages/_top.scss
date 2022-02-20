@@ -26,7 +26,9 @@
     height: 100vh;
     scroll-snap-type: y mandatory;
     overflow: auto;
-
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    
     &:before{
         content: "";
         position: fixed;
@@ -61,16 +63,15 @@
         position:relative;
         display: flex;
         justify-content: center;
-        height: 100vh;
+        height: 100%;
         padding: 50px;
         scroll-snap-align: start;
+        overflow:visible;
         @include config.mq(md){
             flex-flow:column;
             align-items: center;
             justify-content: flex-end;
         }
-        
-        
     }
 
     &__title{
@@ -164,6 +165,9 @@
         overflow: hidden;
         @include config.mq(md){
             bottom: 8%;
+        }
+        @include config.mq(sm){
+            bottom: 15%;
         }
         p{
             font-weight: 700;

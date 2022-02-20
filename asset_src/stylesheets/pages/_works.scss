@@ -4,7 +4,7 @@
 .works {
     background: config.$subcolor;
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
     border-top: dashed 3px config.$textcolor;
 
     &.js-active{
@@ -26,15 +26,7 @@
         
     }
 
-    &:before {
-        content: "";
-        height: 50px;
-        width: 100%;
-        background: config.$subcolor;
-        position: absolute;
-        left: 0;
-        bottom: 100%;
-    }
+    
 
     &__title {
         width: 100%;
@@ -49,7 +41,6 @@
 
         h2 {
             width: 15%;
-            
             @include config.mq(md){
                 width: 30%;
             }
