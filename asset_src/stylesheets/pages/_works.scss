@@ -71,9 +71,7 @@
             @include config.mq(sm){
                 font-size: 3vw;
                 padding-top: 6%;
-                br{
-                    display: none;
-                }
+                
             }
         }
     }
@@ -192,6 +190,9 @@
                 font-size: 1.8vw;
                 font-weight: 700;
                 color: #666;
+                @include config.mq(sm){
+                    font-size: 3vw;
+                }
             }
         }
     }

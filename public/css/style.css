@@ -651,6 +651,8 @@ template {
 
 html {
   font-size: 62.5%;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -1094,6 +1096,14 @@ a:focus {
 .menu__list__wrap ul li a:hover:after {
   width: 100%;
 }
+@media screen and (max-width: 767px) {
+  .menu__list__wrap ul li a:hover {
+    letter-spacing: 0;
+  }
+  .menu__list__wrap ul li a:hover:after {
+    content: none;
+  }
+}
 .menu__list:before, .menu__list:after {
   content: "";
   position: absolute;
@@ -1224,7 +1234,7 @@ a:focus {
   line-height: 0;
   padding: 0;
   position: absolute;
-  top: 16px;
+  top: 17px;
   right: 0;
 }
 @media screen and (max-width: 767px) {
@@ -1244,12 +1254,18 @@ a:focus {
   top: 10px;
   width: 20px;
 }
+@media screen and (max-width: 767px) {
+  .menu__toggle__btn:before {
+    top: 9px;
+  }
+}
 .menu__toggle__btn:after {
   bottom: 10px;
   width: 40px;
 }
 @media screen and (max-width: 767px) {
   .menu__toggle__btn:after {
+    bottom: 11px;
     width: 25px;
   }
 }
@@ -1401,8 +1417,8 @@ a:focus {
 }
 @media screen and (max-width: 767px) {
   .ningen__body {
-    width: 70%;
-    margin-left: 27%;
+    width: 67%;
+    margin-left: 37%;
     margin-bottom: -33%;
   }
 }
@@ -2107,7 +2123,7 @@ a:focus {
 }
 @media screen and (max-width: 767px) {
   .mainarea .thinking {
-    bottom: 15%;
+    bottom: 6%;
   }
 }
 .mainarea .thinking p {
@@ -2301,7 +2317,7 @@ a:focus {
 @media screen and (max-width: 767px) {
   .chair__deco ul li:first-child {
     left: 0%;
-    top: -126%;
+    top: -116%;
   }
 }
 .chair__deco ul li:last-child {
@@ -2311,7 +2327,7 @@ a:focus {
 }
 @media screen and (max-width: 767px) {
   .chair__deco ul li:last-child {
-    top: -111%;
+    top: -101%;
     left: 8%;
   }
 }
@@ -2422,9 +2438,6 @@ a:focus {
   .works__title p {
     font-size: 3vw;
     padding-top: 6%;
-  }
-  .works__title p br {
-    display: none;
   }
 }
 .works__list {
@@ -2560,6 +2573,11 @@ a:focus {
   font-size: 1.8vw;
   font-weight: 700;
   color: #666;
+}
+@media screen and (max-width: 767px) {
+  .works__img__sorry p {
+    font-size: 3vw;
+  }
 }
 
 @-webkit-keyframes sorry {
@@ -2780,6 +2798,7 @@ a:focus {
 }
 .contact__text p {
   font-size: 1.2vw;
+  font-weight: 500;
 }
 @media screen and (max-width: 820px) {
   .contact__text p {
