@@ -167,8 +167,47 @@
                 }
             }
         }
+        a{
+            text-decoration: underline;
+            color: config.$textcolor;
+            transition: .3s;
+            margin-top: 5px;
+            position: relative;
+            z-index: 3000;
+            display: block;
+            &:hover{
+                opacity: .5;
+            }
+        }
+    }
+    &__snsbtn{
+        width: 80px;
+        height: 80px;
+        margin-top: 20px;
+        position: relative;
+        z-index: 3000;
+        a{
+            display: block;
+            img{
+                filter: drop-shadow(2px 3px 0px rgba(0,0,0,0.3));
+                &:hover{
+                    animation: purupuru .2s forwards;
+                }
+            }
+            
+        }
+        
+        
     }
 
 
 }
 
+
+@keyframes purupuru {
+	0% {	transform: translate(0, 0);}
+	25% {	transform: translate(-5px, -0);}
+	50% {	transform: translate(5px, 0);}
+	75% {	transform: translate(-5px, -0);}
+	100% {	transform: translate(0, 0);}
+}

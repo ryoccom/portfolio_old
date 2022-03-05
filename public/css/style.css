@@ -729,6 +729,11 @@ a:focus {
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
 }
+@media screen and (max-width: 767px) {
+  .marker span:before {
+    left: -5px;
+  }
+}
 .marker span:after {
   right: -10px;
   opacity: 0;
@@ -736,6 +741,11 @@ a:focus {
           animation: fadeIn 0.5s cubic-bezier(0.28, 0.99, 0.59, 0.82) forwards;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
+}
+@media screen and (max-width: 767px) {
+  .marker span:after {
+    right: -5px;
+  }
 }
 .marker__s {
   position: relative;
@@ -1921,13 +1931,23 @@ a:focus {
   position: relative;
 }
 
-.top .marker__s:before {
-  -webkit-animation-delay: 6s;
-          animation-delay: 6s;
+.top.js-active .marker__s:before {
+  -webkit-animation: marker__s 0.2s cubic-bezier(0.28, 0.99, 0.59, 0.82) forwards;
+          animation: marker__s 0.2s cubic-bezier(0.28, 0.99, 0.59, 0.82) forwards;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
 }
-.top .marker__s span:before, .top .marker__s span:after {
-  -webkit-animation-delay: 6s;
-          animation-delay: 6s;
+.top.js-active .marker__s span:before {
+  -webkit-animation: fadeIn 1s cubic-bezier(0.28, 0.99, 0.59, 0.82) forwards;
+          animation: fadeIn 1s cubic-bezier(0.28, 0.99, 0.59, 0.82) forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.top.js-active .marker__s span:after {
+  -webkit-animation: fadeIn 0.3s cubic-bezier(0.28, 0.99, 0.59, 0.82) forwards;
+          animation: fadeIn 0.3s cubic-bezier(0.28, 0.99, 0.59, 0.82) forwards;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
 }
 
 .mainarea {
@@ -2023,7 +2043,7 @@ a:focus {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    top: 5%;
+    top: 3%;
   }
 }
 .mainarea__title h1 {
@@ -2083,6 +2103,14 @@ a:focus {
     font-size: 3vw;
     text-align: center;
   }
+}
+.mainarea__title__text .marker__s:before {
+  -webkit-animation: none;
+          animation: none;
+}
+.mainarea__title__text .marker__s span:before, .mainarea__title__text .marker__s span:after {
+  -webkit-animation: none;
+          animation: none;
 }
 .mainarea__images {
   position: relative;
@@ -2221,14 +2249,6 @@ a:focus {
     margin-bottom: 10px;
   }
 }
-.about .mainarea__title__text .marker__s:before {
-  -webkit-animation: none;
-          animation: none;
-}
-.about .mainarea__title__text .marker__s span:before, .about .mainarea__title__text .marker__s span:after {
-  -webkit-animation: none;
-          animation: none;
-}
 .about.js-active:before {
   width: 100%;
 }
@@ -2316,8 +2336,8 @@ a:focus {
 }
 @media screen and (max-width: 767px) {
   .chair__deco ul li:first-child {
-    left: 0%;
-    top: -116%;
+    left: 14%;
+    top: -110%;
   }
 }
 .chair__deco ul li:last-child {
@@ -2327,8 +2347,8 @@ a:focus {
 }
 @media screen and (max-width: 767px) {
   .chair__deco ul li:last-child {
-    top: -101%;
-    left: 8%;
+    top: -95%;
+    left: 23%;
   }
 }
 
@@ -2462,6 +2482,10 @@ a:focus {
 .works__list ul li {
   width: 40%;
   max-width: 340px;
+  -webkit-filter: drop-shadow(2px 3px 0px rgba(0, 0, 0, 0.3));
+          filter: drop-shadow(2px 3px 0px rgba(0, 0, 0, 0.3));
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
 }
 @media screen and (max-width: 820px) {
   .works__list ul li {
@@ -2812,5 +2836,82 @@ a:focus {
   }
   .contact__text p br {
     display: none;
+  }
+}
+.contact__text a {
+  text-decoration: underline;
+  color: #000000;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  margin-top: 5px;
+  position: relative;
+  z-index: 3000;
+  display: block;
+}
+.contact__text a:hover {
+  opacity: 0.5;
+}
+.contact__snsbtn {
+  width: 80px;
+  height: 80px;
+  margin-top: 20px;
+  position: relative;
+  z-index: 3000;
+}
+.contact__snsbtn a {
+  display: block;
+}
+.contact__snsbtn a img {
+  -webkit-filter: drop-shadow(2px 3px 0px rgba(0, 0, 0, 0.3));
+          filter: drop-shadow(2px 3px 0px rgba(0, 0, 0, 0.3));
+}
+.contact__snsbtn a img:hover {
+  -webkit-animation: purupuru 0.2s forwards;
+          animation: purupuru 0.2s forwards;
+}
+
+@-webkit-keyframes purupuru {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  25% {
+    -webkit-transform: translate(-5px, 0);
+            transform: translate(-5px, 0);
+  }
+  50% {
+    -webkit-transform: translate(5px, 0);
+            transform: translate(5px, 0);
+  }
+  75% {
+    -webkit-transform: translate(-5px, 0);
+            transform: translate(-5px, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@keyframes purupuru {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  25% {
+    -webkit-transform: translate(-5px, 0);
+            transform: translate(-5px, 0);
+  }
+  50% {
+    -webkit-transform: translate(5px, 0);
+            transform: translate(5px, 0);
+  }
+  75% {
+    -webkit-transform: translate(-5px, 0);
+            transform: translate(-5px, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
   }
 }

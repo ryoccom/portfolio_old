@@ -109,11 +109,20 @@ ScrollTrigger.matchMedia({
   },
 
   "all": function () {
+    gsap.to('.top', {
+      scrollTrigger: {
+        trigger: '.top',
+        toggleClass: 'js-active',
+        start: 'top 20%',
+        toggleActions: "play none none none"
+      }
+    });
     gsap.to('.about', {
       scrollTrigger: {
         trigger: '.about',
         toggleClass: 'js-active',
         start: 'top 20%',
+        toggleActions: "play none none none"
       }
     });
     gsap.to('.js-fade', {

@@ -41,6 +41,9 @@
             opacity: 0;
             animation: fadeIn .1s cubic-bezier(.28,.99,.59,.82) forwards;
             animation-delay: 2s;
+            @include config.mq(){
+                left: -5px;
+            }
            
         }
 
@@ -49,6 +52,9 @@
             opacity: 0;
             animation: fadeIn .5s cubic-bezier(.28,.99,.59,.82) forwards;
             animation-delay: 2s;
+            @include config.mq(){
+                right: -5px;
+            }
             
         }
     }

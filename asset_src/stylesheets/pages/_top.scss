@@ -7,19 +7,29 @@
     position: relative;
 }
 .top{
-    .marker__s{
-        &:before{
-            animation-delay: 6s;
-        }
-        span{
-            
-            &:before,
-            &:after{
-                animation-delay: 6s;
+    &.js-active{
+        .marker__s{
+            &:before{
+                animation: marker__s .2s cubic-bezier(.28,.99,.59,.82) forwards;
+                animation-delay: 1.2s;
             }
+            span{
+                
+                &:before{
+                    animation: fadeIn 1s cubic-bezier(.28,.99,.59,.82) forwards;
+                    animation-delay: 1s;
+                }
+                
+                &:after{
+                    animation: fadeIn .3s cubic-bezier(.28,.99,.59,.82) forwards;
+                    animation-delay: 1.5s;
+                }
+            }
+            
         }
         
     }
+    
 }
 .mainarea{
     width: 100%;
@@ -86,7 +96,7 @@
             width: 100%;
             height: auto;
             align-items: center;
-            top: 5%;
+            top: 3%;
         }
         
        
@@ -136,6 +146,16 @@
                     text-align: center;
                 }
                 
+            }
+            .marker__s{
+                &:before{
+                    animation: none;
+                }span{
+                    &:before,
+                    &:after{
+                        animation: none;
+                    }
+                }
             }
         }
     }
