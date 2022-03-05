@@ -178,6 +178,12 @@
             &:hover{
                 opacity: .5;
             }
+            @include config.mq(md){
+                font-size: 2.3vw;
+            }
+            @include config.mq(sm){
+                font-size: 3vw;
+            }
         }
     }
     &__snsbtn{
